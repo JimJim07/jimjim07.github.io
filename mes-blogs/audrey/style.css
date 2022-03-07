@@ -1,0 +1,259 @@
+/* GENERAL */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    color: #212f56;
+}
+
+body
+{
+    background: url(pictures-blog-audrey/book-2.jpg) fixed center;
+    background-size: cover;
+}
+
+.wrapper
+{
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1
+{
+    font-size: 4.5em;
+    font-family: "Roboto",Sans-serif;
+    font-weight: lighter;
+    padding-top: 180px;
+    border-bottom: 2px solid ;
+    padding-bottom: 60px;
+}
+
+h2
+{
+    font-size: 2.5em;
+    flex: 1;
+    margin: auto 0 auto 3%;
+}
+
+h3
+{
+    color: #d2b770;
+    font-size: 2.4em;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 50px 0;
+    letter-spacing: 2.7px;
+}
+
+h4
+{
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 1.9em;
+    font-weight: lighter;
+    padding-top: 70px;
+    text-transform: uppercase;
+}
+
+#h4-white
+{
+    color: white;
+}
+
+h5
+{
+    font-size: 1.3em;
+    padding: 18px 0;
+}
+
+p
+
+{
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+#p-1
+{
+    text-align: center;
+    font-size: 2.5em;
+    margin: 100px auto 200px auto;
+    background-color: #212f56c5;
+    padding: 15px;
+    color:#d2b770;
+    width: max-content;
+
+}
+
+#p-2
+{
+    padding-bottom: 100px;
+    font-size: 2em;
+    letter-spacing: 1.2px;
+    font-weight: 300;
+    text-align: start;
+    line-height: 45px;
+}
+
+
+/* HEADER */
+
+header
+{
+   
+    background-color:  #d3bb78de;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#ul-1
+{
+    display: flex;
+}
+
+#ul-1 li
+{ 
+    font-size: 2.1em;
+    list-style: none;
+    margin: auto 28px auto 0;
+}
+
+a
+{
+    text-decoration: none;   
+}
+
+a:hover
+{
+    color:white;
+}
+
+@media screen and (max-width: 1020px)
+{
+    #ul-1
+    {
+        flex-direction: column;
+    }
+
+    .wrapper
+    {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 780px)
+{
+    .wrapper
+    {
+        width: 85%;
+    }
+}
+
+/* MAIN */
+
+
+
+/* PRESENTATION */
+
+#conteneur
+{
+    background-color: white;
+}
+
+
+
+/* US */
+
+#liseret
+{
+    background-color: #212f56bb;
+    min-height: 250px;
+}
+
+/* ARTICLE */
+
+#art-1
+{
+    background-color: #d2b670;
+    padding: 100px 0;  
+}
+
+#contenu
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#arrondi
+{
+    border-radius: 50%;
+}
+
+#texte-1
+{
+    width: 500px;
+    margin: 0 50px;
+}
+
+#texte-2 p
+{
+    padding-top: 50px;
+}
+
+#ul-2
+{
+    text-align: start;
+    font-size: 2em;
+    padding-top: 50px;
+    line-height: 45px;
+}
+
+/* ACTU */
+
+#actu
+{
+    background-color: rgba(255, 255, 255, 0.80);
+}
+
+.article
+{
+    width: 320px;
+    margin: 0 auto 50px auto;
+}
+
+.article img{
+    width: 320px;
+    height: 230px;
+}
+
+.article p{
+    font-size: 1.5em;
+    padding: 0 10px;
+}
+
+#articles
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.overlay
+{
+    
+    background-color: #d2b670;
+    border: #d2b670 2px solid;
+    height: 700px;
+    overflow: hidden;
+}
+
+/* FOOTER */
+
+footer
+{
+    background-color: #212f56;
+}
+

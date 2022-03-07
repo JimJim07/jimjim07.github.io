@@ -1,0 +1,108 @@
+body
+{
+    background: url("pictures/greyzz.png");
+}
+
+/* CLASS */
+.container
+{
+    margin: 0 auto;
+    width: 85%;
+}
+.en-ligne{
+    display: flex;
+}
+.date{
+    width: 15%;
+    margin: 20px 40px;
+    font-size: 1.4em;
+}
+.separator{
+    border: 3px #69b99d  solid;
+}
+
+/* GENERAL */
+
+h1
+{
+    font-size: 3em;
+    letter-spacing: 4px;
+    text-shadow: 6px 6px 3px black;
+}
+h1, h2
+{
+    color: #69b99d;
+    font-family: 'Redressed', cursive;
+}
+h2
+{ 
+    margin-bottom: 5px;
+    font-size: 3em;
+}
+h3
+{
+    font-size: 1.4em;
+}
+p, li
+{
+    font-size: 1.3em;
+}
+/* HEADER */
+
+header
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+#mini
+{
+    height: 120px;
+    border-radius: 10px;
+    margin-top: 40px;
+    
+}
+header a img:hover
+{
+    box-shadow: 5px 5px 9px #69b99d;
+    transition: 0.3s;
+}
+/* EXPERIENCE */
+
+/* COMPETENCE */
+ol
+{
+    border: 1px black solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    padding: 10px 0 10px 50px;
+}
+/* FORMATION */
+/* FOOTER */
+footer
+{
+    height: 80px;
+}
+
+@media all and (max-width:1080px){
+    h1
+    {
+        font-size: 5em;
+    }
+    h2
+    {
+        font-size: 5em;
+    }
+    .date
+    {
+        font-size: 2em;
+    }
+    h3
+    {
+        font-size: 2em;
+    }
+    p, li
+    {
+        font-size: 2em;
+    }
+} 

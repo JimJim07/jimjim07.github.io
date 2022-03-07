@@ -1,0 +1,215 @@
+/* GENERAL */
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* HEADER */
+
+header
+{
+    background-color: #5fd7b1;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1
+{
+    font-size: 5em;
+    color: white;
+    margin: auto 1%;
+    text-shadow: 15px 15px 3px rgba(0, 0, 255, 0.35);
+}
+
+ul
+{
+    margin: auto 1%;
+    flex: 1;
+    text-align: end;
+}
+
+li
+{
+    font-size: 2em;
+    color: white;
+    margin: 2% 5%;
+    list-style: none; 
+}
+
+a
+{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: rgba(0, 0, 255, 0.35);
+}
+
+/* MAIN IMAGE */
+
+#main-image
+{
+    background: url(pictures-seychelles/main-image.jpg)center;
+    height:788px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    border-radius: 0 0 100px 100px;
+}
+
+#overlay
+{
+    background-color: #5fd7b186;
+    height: 100%;
+    width: 32%;
+    text-align: center;
+    border-radius: 0 0 0 100px;
+}
+
+h3
+{
+    font-size: 3.2em;
+    padding: 8% 0;
+    color: white;
+}
+
+p
+{
+    font-size: 1.5em;
+    line-height: 35px;
+    padding: 0 3%;
+    color: white;
+}
+
+h2
+{
+    font-size: 7em;
+    color: rgba(255, 255, 255, 0.25);
+    margin: 500px 11% 0 0;
+    text-align: end;
+    text-shadow: 30px 30px 7px rgba(0, 88, 252, 0.3);
+}
+
+h2:hover
+{
+    color: rgba(0, 0, 255, 0.35);
+}
+
+
+
+/* ARTICLE */
+
+#p2
+{
+    text-align: center;
+    color: #5fd7b1;
+    margin: 4% 10%;
+}
+
+/* LOGO */
+
+#logo
+{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50px;
+    opacity: 0.8;
+}
+
+/* FOOTER */
+
+footer
+{
+    background-color:#5fd7b1;
+    height: 250px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+h4
+{
+    font-size: 5em;
+    color: rgba(0, 0, 255, 0.35);
+    padding-top: 20px;
+}
+
+form
+{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+label
+{
+    font-size: 2em;
+    font-weight: bolder;
+    color: white;
+    margin-right: 20px;
+}
+
+input
+{
+    font-size: 1.2em;
+    margin-right:45px ;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #777;
+}
+
+#buton1
+{
+    text-transform: uppercase;
+    color: rgba(0, 0, 255, 0.35);
+    padding: 5px;
+    background-color: white;
+}
+
+#buton1:hover
+{
+    color: white;
+    background-color: rgba(0, 0, 255, 0.35);
+}
+
+@media screen and (max-width: 1080px)
+{
+    #flag
+    {
+        display:none
+    }
+    #overlay
+    {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(73, 212, 198, 0.35);
+        border-radius: 0 0 100px 100px;
+    }
+    h2
+    {
+        display:none
+    }
+    h3
+    {
+       font-size: 4em;
+    }
+    p
+    {
+        font-size: 2.8em;
+        line-height: 45px;
+    }
+    h4
+    {
+        font-size: 3em;
+    }
+    #logo
+    {
+        display:none
+    }
+}
