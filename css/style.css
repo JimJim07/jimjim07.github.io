@@ -167,7 +167,7 @@ form input {
 }
 .overlay__heading {
   font-size: 3.2em;
-  padding: 8% 0;
+  padding: 7% 0;
   color: #fff;
 }
 .overlay__paragraphe {
@@ -177,7 +177,7 @@ form input {
 @media screen and (max-width: 1079px) {
   .overlay__paragraphe {
     font-size: 2.8em;
-    line-height: 50px;
+    line-height: 48px;
   }
 }
 @media screen and (max-width: 1079px) {
