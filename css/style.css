@@ -112,11 +112,6 @@ form input {
   overflow: hidden;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-@media screen and (max-width: 1079px) {
-  .project {
-    width: 50%;
-  }
-}
 .project__picture {
   margin-bottom: 15px;
 }
