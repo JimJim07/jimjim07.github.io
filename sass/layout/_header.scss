@@ -1,0 +1,38 @@
+/* HEADER */
+
+header
+{
+    background-color: $color-one;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    h1
+    {
+        font-size: 5em;
+        color: $color-two;
+        margin: auto 1%;
+        text-shadow: 15px 15px 3px $color-three;
+    }
+ 
+    
+    #flag{
+        @include mobile-only(){display: none;}
+    }
+}
+.nav{
+    margin: auto 1%;
+    flex: 1;
+    text-align: end;
+    &__link{
+        font-size: 2em;
+        margin: 1% 5%;
+        list-style: none;
+        & a{
+            color: $color-two;
+            text-decoration: none;
+            &:hover{
+                color: $color-three;
+            }
+        }
+    }
+}

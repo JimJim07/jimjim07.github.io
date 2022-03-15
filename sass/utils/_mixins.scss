@@ -1,0 +1,11 @@
+@mixin fonts ($size:2em,$color:$color-one){
+    text-align: center;
+    color: $color;
+    font-size: $size;
+}
+
+@mixin mobile-only {
+    @media screen and (max-width:1079px) {
+        @content;
+    }
+}
