@@ -4,6 +4,8 @@
 @import "./layout/header";
 @import "./layout/footer";
 
+@import "./pages/mes-souvenirs";
+@import "./pages/accueil";
 /* GENERAL */
   
 *
@@ -19,67 +21,6 @@ p
     margin: 0% 3%;
 }
 
- 
-/* MAIN IMAGE */
-
-.main-image
-{
-    background: url(../pictures-seychelles/main-image.jpg)center;
-    height:788px;
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    border-radius: 0 0 100px 100px;
-    &__heading
-    {
-    font-size: 6.8em;
-    color: rgba(255, 255, 255, 0.25);
-    margin: 500px 11% 10px 0;
-    text-align: end;
-    text-shadow: 30px 30px 7px rgba(0, 88, 252, 0.3);
-    @include mobile-only(){display: none;}
-    &:hover
-    {
-    color: rgba(0, 0, 255, 0.35);
-    }
-    }
-}
-
-.overlay
-{
-    background-color: $color-four;
-    height: 100%;
-    width: 32%;
-    text-align: center;
-    border-radius: 0 0 0 100px;
-
-    &__heading
-    {
-    font-size: 3.2em;
-    padding: 8% 0;
-    color: $color-two;
-    }
-
-    &__paragraphe
-    {
-    color: $color-two;
-    }
-    @include mobile-only(){
-        width: 100%;
-        border-radius: 0 0 100px 100px;
-        background-color: rgba(73, 212, 198, 0.35);
-    }
-}
-
-
-
-/* ARTICLE */
-
-.article p{
-    margin: 5% 10%;
-}
-
 /* LOGO */
 
 #logo
@@ -92,69 +33,4 @@ p
     @include mobile-only(){
         display: none;
     }
-}
-
-
-// /* MES SOUVENIRS */
-
-.pictures__heading{
-    margin-top: 20px;
-    letter-spacing: 4px;
-    color: $color-three;
-    text-align: center;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    &:before {
-        content: "« ";
-        color: grey;
-    }
-    &:after {
-        content: " »";
-        color: grey;
-    }
-}
-.projets{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.projet{
-    width: 400px;
-    margin: 30px;
-    background: rgb(255, 255, 255);
-    padding-bottom: 15px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    & a{
-        text-decoration: none;
-    }
-}
-
-.projet:hover{
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    transition: 0.4s;
-}
-
-.projet img{
-    width: 400px;
-    height: 240px;
-}
-
-.projet div{
-    text-align: center;
-    text-transform: uppercase;
-    
-}
-
-.picture{
-    width: 400px;
-    height: 240px;
-    overflow: hidden;
-    margin-bottom: 15px;
-}
-
-.projet .date-projet{
-    font-size: 0.8em;
 }
