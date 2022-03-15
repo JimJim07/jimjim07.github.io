@@ -176,7 +176,7 @@ form input {
 }
 @media screen and (max-width: 1079px) {
   .overlay__paragraphe {
-    font-size: 3em;
+    font-size: 2.8em;
     line-height: 50px;
   }
 }
