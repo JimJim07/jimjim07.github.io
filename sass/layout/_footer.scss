@@ -1,13 +1,13 @@
 /* FOOTER */
 
-footer
+.footer
 {
     background-color:$color-one;
     margin-top: 30px;
     text-align: center;
     border-radius: 25%;
-    h4
-    {
+
+    &__heading{
     font-size: 4em;
     color: $color-three;
     padding-top: 20px;

@@ -1,0 +1,14 @@
+/* GENERAL */
+  
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+p
+{
+    @include fonts(1.5em);
+    line-height: 38px;
+    margin: 0% 3%;
+}

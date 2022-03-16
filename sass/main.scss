@@ -4,33 +4,9 @@
 @import "./layout/header";
 @import "./layout/footer";
 
-@import "./pages/mes-souvenirs";
+@import "./pages/nos-souvenirs";
 @import "./pages/accueil";
-/* GENERAL */
-  
-*
-{
-    margin: 0px;
-    padding: 0px;
-}
 
-p
-{
-    @include fonts(1.5em);
-    line-height: 38px;
-    margin: 0% 3%;
-}
+@import "./base/generals";
 
-/* LOGO */
-
-#logo
-{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 50px;
-    opacity: 0.8;
-    @include mobile-only(){
-        display: none;
-    }
-}
+@import "./components/logo";

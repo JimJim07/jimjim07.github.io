@@ -1,18 +1,19 @@
 /* HEADER */
 
-header
+.header
 {
     background-color: $color-one;
     height: 150px;
     display: flex;
     justify-content: space-between;
-    @include mobile-only(){min-height: 200px;}
-    h1
-    {
+    @include mobile-only(){height: 250px;}
+
+    &__heading{
         font-size: 5em;
         color: $color-two;
         margin: auto 1%;
         text-shadow: 15px 15px 3px $color-three;
+        @include mobile-only(){font-size: 4em;}
     }
  
     
@@ -24,11 +25,13 @@ header
     margin: auto 1%;
     flex: 1;
     text-align: end;
+
     &__link{
         font-size: 2em;
         margin: 1% 5%;
         list-style: none;
-        @include mobile-only(){font-size: 2.8em;}
+        @include mobile-only(){font-size: 3em;}
+        
         & a{
             color: $color-two;
             text-decoration: none;
