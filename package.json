@@ -1,13 +1,11 @@
 {
-  "name": "les-seychelles",
+  "name": "miss-sushi",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed",
-    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed"
   },
   "author": "",
-  "license": "ISC",
-  "browserslist": "last 4 versions"
+  "license": "ISC"
 }

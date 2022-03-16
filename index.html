@@ -2,72 +2,83 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Seychelles</title>
+        <title>Miss Sushi</title>
         <link rel="stylesheet" href="./css/style.css">
-        <link rel="icon" type="picture/png" href="pictures-seychelles/petit-logo.png">
+        <link rel="icon" type="picture/jpg" href="pictures-miss-sushi/icon-miss-sushi.png">
         <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel="stylesheet">
     </head>
 
     <body>
-        <header class="header">
-            <h1 class="header__heading">Les Seychelles.</h1>
-           <nav class="nav">
-                <ul>
-                    <li class="nav__link"><a href="about.html">Nos Souvenirs</a></li>
-                    <li class="nav__link"><a href="https://www.partir.com/Seychelles/quand-partir.html" target="blank">Quand Partir</a></li>
-                    <li class="nav__link"><a href="#inscription">Inscription</a></li>
-                </ul> 
-           </nav>
-            
-            <div class="flag"><img src="pictures-seychelles/flag.png" alt="Drapeau"></div>   
+        <!-- HEADER -->
+
+        <header>
+            <h1>Miss Sushi <span>.</span></h1>
+            <ul>
+                <li><a href="https://misssushi.es/restaurantes/miss-sushi-alicante/">Accueil</a></li>
+                <li><a href="#form">Inscription</a></li>
+            </ul>
         </header>
 
+        <!-- MAIN-IMAGE -->
+        
         <div class="main-image">
-            
-            <h2 class="main-image__heading">Les Seychelles</h2>
-            <div class="overlay">
-                <h3 class="overlay__heading">Une destination de rêve</h3>
-                <p class="overlay__paragraphe">Cet archipel de 115 îles se trouve au cœur de l’océan Indien, à 10 h d’avion de la France.<br><br>
-                    D’origine granitique ou corallienne, les Seychelles se prêtent à plusieurs formes de voyage.<br><br>
-                    
-                    Leurs îles aux plages de sable fin sont émaillées de guesthouses au charme convivial,
-                     d’hôtels nichés sous les palmes des cocotiers.
-                </p>
+            <div class="main-image__overlay">
+                <h2>Ma petite cherie <br> au Miss Sushi</h2>
+                <p>Le Miss Sushi à Alicante est un endroit ou passé une bonne soirée romantique, avec ma chérie, on y a passé une excellente soirée en amoureux.</p>
+                <a href="https://google.com" target="blank">Google</a>
             </div>
         </div>
 
-        <div class="article">
-            <p class="article__paragraphe">
-                L’archipel est un Etat indépendant depuis 1976. Situé au niveau de l’équateur, il est plus proche de Madagascar que du continent africain ou indien.<br><br>
-                Les Seychelles se divisent en deux grands groupes, les îles Intérieures et les îles Extérieures.
+        <!-- ICON -->
 
-                Les îles Intérieures rassemblent les îles proches de Mahé.<br><br>
-                Les îles Extérieures, plus lointaines, comportent notamment les Amirantes, le groupe de Farquhar et le groupe d’Aldabra.<br><br>
-                Dans les îles Intérieures, le trio de Mahé, Praslin et La Digue reçoit tous les suffrages lors d’un premier voyage.
-                
-                Ces îles granitiques offrent des plages de rêve, comme l’anse Intendance à Mahé, l’anse Lazio à Praslin et l’anse Source d’Argent à La Digue.<br><br>
-            </p>
+        <div class="icon">
+            <a href="https://misssushi.es/restaurantes/miss-sushi-alicante/" title="Accueil Miss Sushi" target="blank"><img src="pictures-miss-sushi/icon-miss-sushi.png" alt=""></a>
         </div>
 
-            <a href="pictures-seychelles/grand-logo.jpg" target="blank"><img id="logo" src="pictures-seychelles/petit-logo.png" alt="Photo des Seychelles" title="Cliquez pour agrandir"></a>
+        <!-- ARTICLE -->
+        <section class="article">
+            <h3>Alicante</h3>
+            <div class="photos">
+
+                <div class="photo-1">
+                    <div class="overlay-1">
+                        <h4>Audrey</h4>
+                        <p class="p-small">Alicante ma ville préferée en espagne où j'ai beaucoup de souvenirs</p>
+                        <div class="buton-2"><a href="https://www.facebook.com/elegante.cerise" target="blank">Facebook<br>Audrey</a></div>
+                    </div>
+                </div>
+                
+                <div class="photo-2">
+                    <div class="overlay-2">
+                        <h4>Jimmy</h4>
+                        <p class="p-small">Alicante est une de mes destinations préférées en Europe pour les vacances.</p>
+                        <div class="buton-2"><a href="https://www.facebook.com/jimmy.clairy/" target="blank">Facebook<br>Jimmy</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
 
-        <footer class="footer">
-            <h4 class="footer__heading">Create by Jimmy</h4>
-            <form class="footer__form" id="inscription">
-                <div class="form__field">
-                    <label for="name">Nom</label>
-                    <input id="name" type="text" name="name" placeholder="Votre nom">
-                </div>
-                <div class="form__field">
-                    <label for="email">Email</label>
-                    <input id="email" type="text" name="email" placeholder="Votre email">
-                </div>
+        <!-- FOOTER -->
 
-                <input class="btn" id="buton1" type="submit" value="ok">
-
-            </form>
+        <footer>
+            <h5>Miss Sushi <span>.</span><br>Create by Jimmy</h5>
+            
+            <div id="form">
+                <h6>Inscription</h6>
+                <form>
+                    <div>
+                        <label for="nom">Nom</label>
+                        <input id="nom" type="text" placeholder="Votre Nom">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" type="text" placeholder="Votre Email">
+                    
+                        <input class="buton-1" type="submit" value="OK">
+                    </div>
+                </form>
+            </div>
         </footer>
-
     </body>
 </html>
