@@ -1,0 +1,119 @@
+/* MAIN IMAGE */
+
+.main-image
+{
+    background: url(../pictures-miss-sushi/audrey.jpg) center;
+    height: 800px;
+}
+
+.overlay
+{
+    background-color: $color-five;
+    height: 800px;
+    width: 40%;
+    text-align: center;
+    color: $color-two;
+
+    &__heading
+    {
+    font-size: 3em;
+    padding-top: 10%;
+    }
+
+    &__paragraph
+    {
+    font-size: 2.2em;
+    margin: 10% 0;
+    padding: 0 8%;
+    line-height: 60px;
+    }
+
+    &__link
+    {
+    color: $color-two;
+    text-decoration: none;
+    font-size: 2.4em;
+    background-color:$color-one;
+    padding: 10px 25px;
+    border-radius: 15px;
+    &:hover
+    {
+    background-color: $color-two;
+    color: $color-one;
+    }
+    }
+}
+
+/* ARTICLE */
+
+.article__heading
+{
+    font-size: 4.8em;
+    color: $color-one;
+    text-align: center;
+    padding: 5% 0;
+    text-shadow: 6px 6px 6px $color-four;
+}
+
+.photos
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 8%;
+
+    .photo-1
+    {
+    background: url(../pictures-miss-sushi/alicante-1.jpg);
+    @include article-photo();
+    &__overlay
+    {
+        @include overlay();
+        border-radius: 0 20px 20px 0;
+        float: right;
+    }
+    &__buton{
+        @include buton();
+        &:hover {
+            background-color: $color-one; 
+        }
+    }
+    }
+
+    .photo-2
+    {
+    background: url(../pictures-miss-sushi/alicante-2.jpg);
+    @include article-photo();
+    &__overlay
+    {
+        @include overlay();
+        border-radius: 20px 0 0 20px;
+    }
+    &__buton{
+        @include buton();
+        &:hover {
+            background-color: $color-one; 
+        }
+    }
+    }
+
+    h4
+    {
+        font-size: 2.5em;
+        color: $color-four;
+        text-align: center;
+        padding-top: 10px;
+    }
+    p
+    { 
+        text-align: center;
+        font-size: 1.4em;
+        padding: 15px;
+        color: $color-four;
+    }
+    a
+    {
+        color: $color-two;
+        text-decoration: none;
+    }
+}
