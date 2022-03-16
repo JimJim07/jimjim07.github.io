@@ -11,21 +11,23 @@
     <body>
         <!-- HEADER -->
 
-        <header>
-            <h1>Miss Sushi <span>.</span></h1>
-            <ul>
-                <li><a href="https://misssushi.es/restaurantes/miss-sushi-alicante/">Accueil</a></li>
-                <li><a href="#form">Inscription</a></li>
-            </ul>
+        <header class="header">
+            <h1 class="header__heading">Miss Sushi <span>.</span></h1>
+            <nav class="nav">
+                <ul class="nav__ul">
+                    <li class="nav__link"><a href="https://misssushi.es/restaurantes/miss-sushi-alicante/">Accueil</a></li>
+                    <li class="nav__link"><a href="#inscription">Inscription</a></li>
+                </ul>
+            </nav>
         </header>
 
         <!-- MAIN-IMAGE -->
         
         <div class="main-image">
-            <div class="main-image__overlay">
-                <h2>Ma petite cherie <br> au Miss Sushi</h2>
-                <p>Le Miss Sushi à Alicante est un endroit ou passé une bonne soirée romantique, avec ma chérie, on y a passé une excellente soirée en amoureux.</p>
-                <a href="https://google.com" target="blank">Google</a>
+            <div class="overlay">
+                <h2 class="overlay__heading">Ma petite cherie <br> au Miss Sushi</h2>
+                <p class="overlay__paragraph">Le Miss Sushi à Alicante est un endroit ou passé une bonne soirée romantique, avec ma chérie, on y a passé une excellente soirée en amoureux.</p>
+                <a class="overlay__link" href="https://google.com" target="blank">Google</a>
             </div>
         </div>
 
@@ -37,41 +39,40 @@
 
         <!-- ARTICLE -->
         <section class="article">
-            <h3>Alicante</h3>
+            <h3 class="article__heading">Alicante</h3>
             <div class="photos">
 
                 <div class="photo-1">
-                    <div class="overlay-1">
-                        <h4>Audrey</h4>
-                        <p class="p-small">Alicante ma ville préferée en espagne où j'ai beaucoup de souvenirs</p>
-                        <div class="buton-2"><a href="https://www.facebook.com/elegante.cerise" target="blank">Facebook<br>Audrey</a></div>
+                    <div class="photo-1__overlay">
+                        <h4 class="photo-1__heading">Audrey</h4>
+                        <p class="photo-1__paragraph">Alicante ma ville préferée en espagne où j'ai beaucoup de souvenirs</p>
+                        <div class="photo-1__buton"><a href="https://www.facebook.com/elegante.cerise" target="blank">Facebook<br>Audrey</a></div>
                     </div>
                 </div>
                 
                 <div class="photo-2">
-                    <div class="overlay-2">
-                        <h4>Jimmy</h4>
-                        <p class="p-small">Alicante est une de mes destinations préférées en Europe pour les vacances.</p>
-                        <div class="buton-2"><a href="https://www.facebook.com/jimmy.clairy/" target="blank">Facebook<br>Jimmy</a></div>
+                    <div class="photo-2__overlay">
+                        <h4 class="photo-2__heading">Jimmy</h4>
+                        <p class="photo-2__paragraph">Alicante est une de mes destinations préférées en Europe pour les vacances.</p>
+                        <div class="photo-2__buton"><a href="https://www.facebook.com/jimmy.clairy/" target="blank">Facebook<br>Jimmy</a></div>
                     </div>
                 </div>
             </div>
         </section>
         
-
         <!-- FOOTER -->
 
-        <footer>
-            <h5>Miss Sushi <span>.</span><br>Create by Jimmy</h5>
+        <footer class="footer">
+            <h5 class="footer__heading">Miss Sushi <span>.</span><br>Create by Jimmy</h5>
             
-            <div id="form">
-                <h6>Inscription</h6>
-                <form>
-                    <div>
+            <div class="inscription" id="inscription">
+                <h6 class="inscription__heading">Inscription</h6>
+                <form class="form">
+                    <div class="form__name">
                         <label for="nom">Nom</label>
                         <input id="nom" type="text" placeholder="Votre Nom">
                     </div>
-                    <div>
+                    <div class="form__email">
                         <label for="email">Email</label>
                         <input id="email" type="text" placeholder="Votre Email">
                     
