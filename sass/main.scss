@@ -1,30 +1,150 @@
-/* GENERAL */
 @import "./utils/mixins";
-@import "./utils/variables";
+@import "./utils/variales";
+.separator{
+    border-bottom: 4px solid $color-primary;
+    margin: 30px 0;
+    box-shadow: 0px 0px 15px 5px $color-primary;
+}
+body{
+    margin: 0;
 
-@import "./base/generals";
+}
 
-@import "./layout/header";
-@import "./layout/footer";
+header{
+    display: flex;
+    justify-content: space-around;
+}
 
-@import "./pages/accueil";
+h1{
+    color: $color-secondary;
+    @include border-raduis();
+    @include font-style($color-secondary)
+}
 
-@import "./components/icon";
+ul{
+    display: flex;
+    li{
+        font-size: 25px;
+        font-weight: bold;
+        list-style: none;
+        padding: 22px 25px 0 0;
+        a{
+            text-decoration: none;
+            color: $color-secondary;
+        }
+    }    
+}
 
-@media screen and (max-width: 1079px)
-{  
-    .overlay
-    {
-    background-color: rgba(255, 0, 179, 0.4);
-    width: 100%;
-    &__paragraph
-    {
-        font-size: 2.9em;
-    }
-    }
+h2{
+    text-align: center;
+    color: $color-secondary;
+    text-decoration: underline;
+}
+p{
+    color: $color-thirdy;  
+}
+.main{
+    width: 70%;
+    margin: 0 auto;
+}
 
-    .icon
-    {
-        display: none;
+h3{
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    @include border-raduis();
+    @include font-style($color-secondary);
+}
+// TEST
+@mixin overlay ($height:30%, $width:30%){
+    
+    background-size: cover;
+    border-radius: 30%;
+    position: absolute;
+    height: $height;
+    width: $width;
+    overflow: hidden;
+    border: 1px solid white;
+}
+@mixin over ($color:red){
+    background-color: $color;
+    height: 100%;
+    width: 35%;
+}
+@mixin btn ($color:aqua){
+    
+    background-color: $color;
+    margin-top: 110%;
+    margin-left: 25%;
+    border-radius: 10px;
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: larger;
     }
 }
+
+.photo{
+    background: url(../pictures-seychelles/our-photos/20220121_104358.jpg);
+    height: 600px;
+    width: 1200px;
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+    margin: auto;
+    h1{
+        margin: auto;
+        width: 30%;
+        color: white;
+        text-align: center;
+    }
+
+    .overlay-1{
+        background: url(../pictures-seychelles/our-photos/20220121_154220.jpg);
+        @include overlay();
+        .over-1{
+            @include over(rgba(255, 255, 0, 0.3));
+            .btn-1{
+                @include btn(rgba(128, 0, 128, 0.5))
+            }
+        }   
+    }
+    .overlay-2{
+        background: url(../pictures-seychelles/our-photos/20220121_153951.jpg);
+        @include overlay();
+        bottom: 0px;
+        .over-2{
+            @include over(rgba(0, 0, 255, 0.3));
+            .btn-2{
+                @include btn(rgba(255, 255, 0, 0.5))
+            }
+        }
+
+    }
+    .overlay-3{
+        background: url(../pictures-seychelles/our-photos/20220126_094455.jpg);
+        @include overlay();
+        right: 0px;
+        .over-3{
+            @include over(rgba(0, 128, 0, 0.3));
+            .btn-3{
+                @include btn(rgba(0, 0, 255, 0.5))
+            }
+        }
+
+    }
+    .overlay-4{
+        background: url(../pictures-seychelles/our-photos/20220131_103517.jpg);
+        @include overlay();
+        bottom: 0px;
+        right: 0px;
+        .over-4{
+            @include over(rgba(128, 0, 128, 0.3));
+            .btn-4{
+                @include btn(rgba(0, 128, 0, 0.5))
+            }
+        }
+
+    }
+}
+
