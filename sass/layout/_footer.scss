@@ -1,0 +1,58 @@
+.footer
+{
+    background-color: $color-three;
+    min-height: 200px;
+    display: flex;
+    &__heading
+    {
+        font-size: 3em;
+        color: $color-two;
+        margin: auto 3%;
+        &:hover
+        {
+        color: $color-one;
+        }
+        span
+        {
+            color: $color-one;
+        }
+    }
+}
+
+.inscription
+{
+    margin: 1.5% auto;
+    &__heading
+    {
+        font-size: 2.5em;
+        color: $color-two;
+        margin-bottom: 15px;
+    }
+
+    label
+    {
+        font-size: 1.4em;
+    }
+    input
+    {
+        padding: 5px;
+        border: 2px solid $color-two;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    .form__btn
+    {
+        background-color:$color-one;
+        color: $color-two;
+        padding: 10px;
+        margin-left: 10px;
+        border-radius: 10px;
+        border: none;
+        font-weight: bold;
+        &:hover
+        {
+        color: $color-one;
+        background-color: $color-two;
+        }
+    }  
+}
