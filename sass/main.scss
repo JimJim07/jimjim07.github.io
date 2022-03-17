@@ -5,6 +5,13 @@
     padding: 0;
 }
 
+$color-primary: #444;
+$color-secondary: #777;
+$color-white: white;
+$color-three: #fa7a00;
+$color-four: #02b8dd;
+$color-five: #ddd;
+
 body
 {
     font-family: Arial, Helvetica, sans-serif;
@@ -12,7 +19,7 @@ body
 }
 h1,h2,h3,h4
 {
-color: #444;    
+color: $color-primary;   
 }
 h1
 {
@@ -35,7 +42,7 @@ h4
 p
 {
     line-height: 20px;
-    color: #777;
+    color: $color-secondary;
 }
 ul
 {
@@ -44,7 +51,7 @@ ul
 a
 {
     text-decoration: none; 
-    color: #444; 
+    color: $color-primary;
 }
 .wrapper
 {
@@ -54,7 +61,7 @@ a
 }
 .orange
 {
-    color: #ff7a00;
+    color: $color-three;
 }
 .clear
 {
@@ -99,7 +106,7 @@ header nav ul li a
 
 header nav ul li a:hover
 {
-    color: #02b8dd;
+    color: $color-four;
 }
 
 /* MAIN IMAGE*/
@@ -107,7 +114,7 @@ header nav ul li a:hover
 #main-image
 {
     height: 580px;
-    background:url('pictures-site-web-1/main.jpg') center;
+    background:url('../pictures-site-web-1/main.jpg') center;
 }
 #main-image h2
 {
@@ -121,8 +128,8 @@ header nav ul li a:hover
     display: block;
     width: 120px;
     height: 50px;
-    background:#ff7a00;
-    color: #fff;
+    background:$color-three;
+    color: $color-white;
     font-size: 20px;
     margin: 0 auto;
     line-height: 50px;
@@ -131,7 +138,7 @@ header nav ul li a:hover
 }
 .button-1:hover
 {
-    background:#02b8dd;
+    background:$color-four;
 }
 
 /* STEP */
@@ -160,22 +167,22 @@ header nav ul li a:hover
 }
 #step-1
 {
-    background: url('pictures-site-web-1/steps-icon-1.png') no-repeat top center;
+    background: url('../pictures-site-web-1/steps-icon-1.png') no-repeat top center;
 }
 #step-2
 {
-    background: url('pictures-site-web-1/steps-icon-2.png') no-repeat top center;
+    background: url('../pictures-site-web-1/steps-icon-2.png') no-repeat top center;
 }
 #step-3
 {
-    background: url('pictures-site-web-1/steps-icon-3.png') no-repeat top center;
+    background: url('../pictures-site-web-1/steps-icon-3.png') no-repeat top center;
 }
 
 /* POSSIBILITIES */
 
 #possibilities
 {
-    background-color: #e7e7e7;
+    background-color: $color-five;
     padding: 60px 0;
    
 }
@@ -207,7 +214,7 @@ header nav ul li a:hover
 }
 article h4
 {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $color-five;
     padding-bottom: 20px;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -220,15 +227,15 @@ article h4
 }
 .button-2
 {
-    color: #fff;
-    background-color: #ff7a00;
+    color: $color-white;
+    background-color: $color-three;
     padding: 10px 20px;
     border-radius: 10px;
 }
 .button-2:hover
 {
-    color: #fff;
-    background-color: #02b8dd;
+    color: $color-white;
+    background-color: $color-four;
 }
 
 /* CONTACT */
@@ -243,7 +250,7 @@ article h4
     width: 400px;
     text-transform: uppercase;
     margin:0 auto 20px auto;
-    border-bottom: 1px solid #02b8dd;
+    border-bottom: 1px solid $color-four;
     padding-bottom:20px ;
 }
 form
@@ -255,30 +262,30 @@ label
     font-weight: bold;
     font-size: 20px;
     margin-right: 10px;
-    color: #777;
+    color: $color-secondary;
 }
 input[type="text"]
 {
     padding: 10px;
     font-size: 20px;
     margin-right: 20px;
-    border: 2px solid #ddd;
+    border: 2px solid $color-five;
     border-radius: 3px;
 }
 .button-3
 {
-    color: #fff;
+    color: $color-white;
     font-size: 20px;
     font-weight: bold;
     padding: 11px;
-    background-color:#02b8dd;
+    background-color:$color-four;
     border-style: none;
     border-radius: 3px;
 }
 .button-3:hover
 {
-    color: #fff;
-    background-color:#444;
+    color: $color-white;
+    background-color:$color-primary;
 }
 
 /* footer */
@@ -286,11 +293,11 @@ input[type="text"]
 footer
 {
     height: 260px;
-    background-color: #444;
+    background-color: $color-primary;
 }
 footer h1
 {
-    color: #fff;
+    color: $color-white;
     text-align: center;
     padding-top: 80px;   
 }
@@ -299,5 +306,5 @@ footer h1
     text-align: center;
     font-weight: bold;
     padding-top: 30px;
-    color: #777;
+    color: $color-secondary;
 }
