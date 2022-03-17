@@ -1,5 +1,38 @@
 @import "./utils/mixins";
 @import "./utils/variales";
+
+@mixin overlay ($height:30%, $width:30%){
+    
+    background-size: cover;
+    border-radius: 30%;
+    position: absolute;
+    height: $height;
+    width: $width;
+    overflow: hidden;
+    border: 1px solid white;
+}
+@mixin over ($color:red){
+    background-color: $color;
+    height: 100%;
+    width: 35%;
+}
+@mixin btn ($color:aqua){
+    
+    background-color: $color;
+    margin-top: 90%;
+    margin-left: 25%;
+    border-radius: 10px;
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: larger;
+    }
+}
+@mixin phone {
+    @media only screen and (max-width:500px) {
+        @content;
+    }
+}
 .separator{
     border-bottom: 4px solid $color-primary;
     margin: 30px 0;
@@ -7,6 +40,7 @@
 }
 body{
     margin: 0;
+    background-color: bisque;
 
 }
 
@@ -39,13 +73,19 @@ h2{
     text-align: center;
     color: $color-secondary;
     text-decoration: underline;
+    @include phone(){
+        color: red;
+    }
 }
 p{
-    color: $color-thirdy;  
+    color: $color-thirdy;
+    @include phone(){display: none;}
+    
 }
 .main{
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
+    text-align: justify;
 }
 
 h3{
@@ -56,48 +96,16 @@ h3{
     @include font-style($color-secondary);
 }
 // TEST
-@mixin overlay ($height:30%, $width:30%){
-    
-    background-size: cover;
-    border-radius: 30%;
-    position: absolute;
-    height: $height;
-    width: $width;
-    overflow: hidden;
-    border: 1px solid white;
-}
-@mixin over ($color:red){
-    background-color: $color;
-    height: 100%;
-    width: 35%;
-}
-@mixin btn ($color:aqua){
-    
-    background-color: $color;
-    margin-top: 110%;
-    margin-left: 25%;
-    border-radius: 10px;
-    a{
-        text-decoration: none;
-        color: white;
-        font-size: larger;
-    }
-}
+
 
 .photo{
     background: url(../pictures-seychelles/our-photos/20220121_104358.jpg);
     height: 600px;
-    width: 1200px;
+    width: 80%;
     background-size: cover;
     border-radius: 20px;
     position: relative;
     margin: auto;
-    h1{
-        margin: auto;
-        width: 30%;
-        color: white;
-        text-align: center;
-    }
 
     .overlay-1{
         background: url(../pictures-seychelles/our-photos/20220121_154220.jpg);
@@ -119,7 +127,6 @@ h3{
                 @include btn(rgba(255, 255, 0, 0.5))
             }
         }
-
     }
     .overlay-3{
         background: url(../pictures-seychelles/our-photos/20220126_094455.jpg);
@@ -131,7 +138,6 @@ h3{
                 @include btn(rgba(0, 0, 255, 0.5))
             }
         }
-
     }
     .overlay-4{
         background: url(../pictures-seychelles/our-photos/20220131_103517.jpg);
@@ -144,7 +150,6 @@ h3{
                 @include btn(rgba(0, 128, 0, 0.5))
             }
         }
-
     }
 }
 
