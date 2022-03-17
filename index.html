@@ -1,73 +1,84 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Test sass</title>
-</head>
-<body>
-    <header class="header">
+    <head>
+        <meta charset="utf-8">
+        <title>Miss Sushi</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" type="picture/jpg" href="pictures-miss-sushi/icon-miss-sushi.png">
+        <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel="stylesheet">
+    </head>
 
-        <h1 class="header__heading">Jimmy Clairy</h1>
-        <nav class="nav">
+    <body>
+        <!-- HEADER -->
+
+        <header>
+            <h1>Miss Sushi <span>.</span></h1>
             <ul>
-                <li class="nav__link"><a href="#">Acceuil</a></li>
-                <li class="nav__link"><a href="#">Formation</a></li>
-                <li class="nav__link"><a href="#">Contact</a></li>
-            </ul> 
-        </nav>
+                <li><a href="https://misssushi.es/restaurantes/miss-sushi-alicante/">Accueil</a></li>
+                <li><a href="#form">Inscription</a></li>
+            </ul>
+        </header>
+
+        <!-- MAIN-IMAGE -->
         
-    </header>
-
-    <div class="separator"></div>
-
-    <section class="main">
-        <h2>Titre 1</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet dignissimos deserunt incidunt beatae assumenda nesciunt distinctio enim quaerat saepe, iste quos numquam aut corporis, dolores alias ab eligendi id tempore, perspiciatis aliquid. Enim, quae beatae cupiditate distinctio totam mollitia et, consectetur nobis odit, ipsa iusto deserunt sequi? Culpa, eos reprehenderit?</p>
-    </section>
-
-    
-    <div class="photo">
-
-        <div class="overlay-1">
-            <div class="over-1">
-                <button class="btn-1"><a href="./pictures-seychelles/our-photos/20220121_154220.jpg">Agrandir</a></button>
-            </div>
-        </div>
-        <div class="overlay-2">
-            <div class="over-2">
-                <button class="btn-2"><a href="./pictures-seychelles/our-photos/20220121_153951.jpg">Agrandir</a></button>
-            </div>
-        </div>
-        <div class="overlay-3">
-            <div class="over-3">
-                <button class="btn-3"><a href="./pictures-seychelles/our-photos/20220126_094455.jpg">Agrandir</a></button>
-            </div>
-        </div>
-        <div class="overlay-4">
-            <div class="over-4">
-                <button class="btn-4"><a href="./pictures-seychelles/our-photos/20220131_103517.jpg">Agrandir</a></button>
+        <div class="main-image">
+            <div class="main-image__overlay">
+                <h2>Ma petite cherie <br> au Miss Sushi</h2>
+                <p>Le Miss Sushi à Alicante est un endroit ou passé une bonne soirée romantique, avec ma chérie, on y a passé une excellente soirée en amoureux.</p>
+                <a href="https://google.com" target="blank">Google</a>
             </div>
         </div>
 
-    </div>
+        <!-- ICON -->
 
-    <section class="main">
-        <h2>Titre 3</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi itaque ipsum ullam facilis doloribus iste natus tempore accusantium labore ex expedita qui veritatis incidunt, accusamus vitae voluptatem impedit hic blanditiis dolores recusandae ab? Quae, atque. Quae veritatis reprehenderit sit soluta itaque aliquam, at earum sed aperiam expedita molestias dolor porro, cupiditate atque consequuntur nesciunt error commodi repellendus culpa ad? Officiis dicta veritatis nostrum pariatur tempora quidem! Sit at pariatur accusantium fugiat eligendi, obcaecati soluta repellat odit quibusdam modi deserunt quis, dolorem fugit, sunt culpa quaerat esse numquam. Consequuntur consequatur exercitationem qui, perspiciatis beatae explicabo porro, inventore ea perferendis quasi nihil?</p>
-    </section>
-
-    <div class="separator"></div>
-
-    <footer class="footer">
-
-        <div>
-            <h3 class="footer__headind">Final</h3>
+        <div class="icon">
+            <a href="https://misssushi.es/restaurantes/miss-sushi-alicante/" title="Accueil Miss Sushi" target="blank"><img src="pictures-miss-sushi/icon-miss-sushi.png" alt=""></a>
         </div>
 
-    </footer>
+        <!-- ARTICLE -->
+        <section class="article">
+            <h3>Alicante</h3>
+            <div class="photos">
 
-</body>
+                <div class="photo-1">
+                    <div class="overlay-1">
+                        <h4>Audrey</h4>
+                        <p class="p-small">Alicante ma ville préferée en espagne où j'ai beaucoup de souvenirs</p>
+                        <div class="buton-2"><a href="https://www.facebook.com/elegante.cerise" target="blank">Facebook<br>Audrey</a></div>
+                    </div>
+                </div>
+                
+                <div class="photo-2">
+                    <div class="overlay-2">
+                        <h4>Jimmy</h4>
+                        <p class="p-small">Alicante est une de mes destinations préférées en Europe pour les vacances.</p>
+                        <div class="buton-2"><a href="https://www.facebook.com/jimmy.clairy/" target="blank">Facebook<br>Jimmy</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- FOOTER -->
+
+        <footer>
+            <h5>Miss Sushi <span>.</span><br>Create by Jimmy</h5>
+            
+            <div id="form">
+                <h6>Inscription</h6>
+                <form>
+                    <div>
+                        <label for="nom">Nom</label>
+                        <input id="nom" type="text" placeholder="Votre Nom">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" type="text" placeholder="Votre Email">
+                    
+                        <input class="buton-1" type="submit" value="OK">
+                    </div>
+                </form>
+            </div>
+        </footer>
+    </body>
 </html>
