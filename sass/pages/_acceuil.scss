@@ -1,0 +1,54 @@
+.photo{
+    background: url(../pictures-seychelles/our-photos/20220121_104358.jpg);
+    height: 600px;
+    width: 80%;
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+    margin: auto;
+
+    .overlay-1{
+        background: url(../pictures-seychelles/our-photos/20220121_154220.jpg);
+        @include overlay();
+        .over-1{
+            @include over(rgba(255, 255, 0, 0.3));
+            .btn-1{
+                @include btn(rgba(128, 0, 128, 0.5))
+            }
+        }   
+    }
+    .overlay-2{
+        background: url(../pictures-seychelles/our-photos/20220121_153951.jpg);
+        @include overlay();
+        bottom: 0px;
+        .over-2{
+            @include over(rgba(0, 0, 255, 0.3));
+            .btn-2{
+                @include btn(rgba(255, 255, 0, 0.5))
+            }
+        }
+    }
+    .overlay-3{
+        background: url(../pictures-seychelles/our-photos/20220126_094455.jpg);
+        @include overlay();
+        right: 0px;
+        .over-3{
+            @include over(rgba(0, 128, 0, 0.3));
+            .btn-3{
+                @include btn(rgba(0, 0, 255, 0.5))
+            }
+        }
+    }
+    .overlay-4{
+        background: url(../pictures-seychelles/our-photos/20220131_103517.jpg);
+        @include overlay();
+        bottom: 0px;
+        right: 0px;
+        .over-4{
+            @include over(rgba(128, 0, 128, 0.3));
+            .btn-4{
+                @include btn(rgba(0, 128, 0, 0.5))
+            }
+        }
+    }
+}

@@ -10,3 +10,31 @@
     font-style: italic;
     letter-spacing: 7px;
 }
+
+@mixin overlay ($height:30%, $width:30%){
+    
+    background-size: cover;
+    border-radius: 30%;
+    position: absolute;
+    height: $height;
+    width: $width;
+    overflow: hidden;
+    border: 1px solid white;
+}
+@mixin over ($color:red){
+    background-color: $color;
+    height: 100%;
+    width: 35%;
+}
+@mixin btn ($color:aqua){
+    
+    background-color: $color;
+    margin-top: 90%;
+    margin-left: 25%;
+    border-radius: 10px;
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: larger;
+    }
+}

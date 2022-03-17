@@ -1,0 +1,7 @@
+.footer__heading{
+    text-align: center;
+    width: 300px;
+    margin: 40px auto;
+    @include border-raduis();
+    @include font-style($color-secondary);
+}
