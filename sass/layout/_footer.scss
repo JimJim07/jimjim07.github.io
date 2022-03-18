@@ -1,0 +1,19 @@
+.footer
+{
+    height: 260px;
+    background-color: $color-primary;
+    &__heading
+    {
+    color: $color-white;
+    text-align: center;
+    padding-top: 80px;   
+    }
+    &__coopyright
+    {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+    color: $color-secondary;
+    }   
+}
+

@@ -4,49 +4,51 @@
         <meta charset="utf-8">
         <link href="./css/style.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel="stylesheet">
-        <title>Travel Agency Jimmy</title>
+        <title>Travel Agency Jimmy Sass</title>
         <link href="pictures-site-web-1/steps-icon-3.png" type="picture/png" rel="icon">
     </head>
 
     <body>
 
-        <header>
-            <div class="wrapper">
-                <h1>Travel Agency Jimmy<span class="orange">.</span></h1>
-                <nav>
+        
+        <div class="wrapper">
+            <header class="header">    
+                <h1 class="header__heading">Travel Agency Jimmy<span class="orange">.</span></h1>
+                <nav class="nav">
                     <ul>
-                        <li><a href="#main-image">Accueil</a></li>
-                        <li><a href="#steps">Destinations</a></li>
-                        <li><a href="#possibilities">Circuits</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li class="nav__link"><a href="#main-image">Accueil</a></li>
+                        <li class="nav__link"><a href="#steps">Destinations</a></li>
+                        <li class="nav__link"><a href="#possibilities">Circuits</a></li>
+                        <li class="nav__link"><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-            </div>
-        </header>
+            </header>
+        </div>
+        
 
-        <section id="main-image">
+        <section id="main-image" class="main-image">
 
-               <h2>Organisez votre<br><strong>voyage sur mesure</strong></h2>
-                <a href="#" class="button-1">Par ici</a> 
+               <h2 class="main-image__heading">Organisez votre<br><strong>voyage sur mesure</strong></h2>
+                <a href="#" class="main-image__button">Par ici</a>
             
         </section>
 
-        <section id="steps">
+        <section id="steps" class="steps">
             <div class="wrapper">
                 <ul>
-                    <li id="step-1">
-                        <h4>planifier</h4>
-                        <p>Confiez-nous vos rêves d'évasion: en famille ou entre amis,
+                    <li class="step-1">
+                        <h4 class="step-1__heading">planifier</h4>
+                        <p class="step-1__paragraph">Confiez-nous vos rêves d'évasion: en famille ou entre amis,
                              nous trouverons la formule qui comblera vos attentes.</p>
                     </li>
-                    <li id="step-2">
-                        <h4>Organisez</h4>
-                        <p>Bénéficiez de l'expertise de nos spécialistes de chaque destinaton,
+                    <li class="step-2">
+                        <h4 class="step-2__heading">Organisez</h4>
+                        <p class="step-2__paragraph">Bénéficiez de l'expertise de nos spécialistes de chaque destinaton,
                             ils vous accompagnent dans la réalisation de votre voyage.</p>
                     </li>
-                    <li id="step-3">
-                        <h4>voyager</h4>
-                        <p>Nous nous chargeons d'assurer votre sécurité et de veiller à votre
+                    <li class="step-3">
+                        <h4 class="step-3__heading">voyager</h4>
+                        <p class="step-3__paragraph">Nous nous chargeons d'assurer votre sécurité et de veiller à votre
                             pleine sérénité tout au long de votre voyage.</p>
                     </li>
                     <div class="clear"></div>
@@ -54,36 +56,36 @@
             </div>
         </section>
 
-        <section id="possibilities">
-            <div id="container">
-                <article style="background-image: url(./pictures-site-web-1/article-image-1.jpg);">
-                    <div class="overlay">
-                        <h4>Partez en famille</h4>
-                        <p><small>Offrez le meilleur à ceux que vous aimez et
+        <section id="possibilities" class="possibilities">
+            <div class="container">
+                <article class="article-1" style="background-image: url(./pictures-site-web-1/article-image-1.jpg);">
+                    <div class="article-1__overlay">
+                        <h4 class="article-1__heading">Partez en famille</h4>
+                        <p class="article-1__paragraph"><small>Offrez le meilleur à ceux que vous aimez et
                              partagez des moments fabuleux !</small></p>
-                             <a href="#" class="button-2">Plus d'infos</a>
+                             <a href="#" class="article-1__button">Plus d'infos</a>
                     </div>
                 </article>
 
-                <article style="background-image: url(pictures-site-web-1/article-image-2.jpg);">
-                    <div class="overlay">
-                        <h4>Envie de s'evader</h4>
-                        <p><small>Parfois un peu d'evasion serait le bienvenue et
+                <article class="article-2" style="background-image: url(pictures-site-web-1/article-image-2.jpg);">
+                    <div class="article-2__overlay">
+                        <h4 class="article-2__heading">Envie de s'evader</h4>
+                        <p class="article-2__paragraph"><small>Parfois un peu d'evasion serait le bienvenue et
                              ferait le plus grand bien !</small></p>
-                             <a href="#" class="button-2">Plus d'infos</a>
+                             <a href="#" class="article-2__button">Plus d'infos</a>
                     </div>
                 </article>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="contact">
             <div class="wrapper">
-                <h3>Contactez-nous</h3>
-                <p>Chez Travel Agency nous savons que voyager est une aventure humaine 
+                <h3 class="contact__heading">Contactez-nous</h3>
+                <p class="contact__paragraph">Chez Travel Agency nous savons que voyager est une aventure humaine 
                     mais égalemant un engagement financier impotant pour vous.<br> 
                     C'est pourquoi nous mettons un point d'honneur à prebdre en compte chacune de vos attentes 
                     pour vous aider dans la prpépartion de votre séjour, circuit ou voyage sur mesure.</p>
-                    <form>
+                    <form class="form">
                         <label for="name">Nom</label>
                         <input type="text" id="name" placeholder="Votre nom">
 
@@ -95,12 +97,10 @@
             </div>
         </section>
 
-
-
-        <footer>
+        <footer class="footer">
             
-                <h1>Create by Jimmy<span class="orange">.</span></h1>
-                <div class="coopyright">Copyright © 2021. Tous droits réservés. </div>
+                <h1 class="footer__heading">Create by Jimmy<span class="orange">.</span></h1>
+                <div class="footer__coopyright">Copyright © 2021. Tous droits réservés. </div>
 
         </footer>
 

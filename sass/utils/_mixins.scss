@@ -1,0 +1,6 @@
+@mixin step ($width:300px){
+    width: $width;
+    padding-top: 140px;
+    text-align: center;
+    margin-right: 30px;
+}

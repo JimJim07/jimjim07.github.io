@@ -1,0 +1,49 @@
+.contact
+{
+    padding: 60px 0;
+    text-align: center;
+    &__heading
+    {
+        width: 400px;
+        text-transform: uppercase;
+        margin:0 auto 20px auto;
+        border-bottom: 1px solid $color-four;
+        padding-bottom:20px ;
+    }
+}
+
+.form
+{
+    margin: 60px 0 20px 0;
+        label
+    {
+        font-weight: bold;
+        font-size: 20px;
+        margin-right: 10px;
+        color: $color-secondary;
+    }
+        input[type="text"]
+    {
+        padding: 10px;
+        font-size: 20px;
+        margin-right: 20px;
+        border: 2px solid $color-five;
+        border-radius: 3px;
+    }
+    .button-3
+    {
+        color: $color-white;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 11px;
+        background-color:$color-four;
+        border-style: none;
+        border-radius: 3px;
+
+        &:hover
+        {
+            color: $color-white;
+            background-color:$color-primary;
+        } 
+    }
+}
