@@ -8,7 +8,7 @@
     &__heading
     {
         margin-top: 30px;
-        @media screen and (max-width:720px) {color:$color-four;}
+        @media screen and (max-width:730px) {color:$color-four;}
     }
 }
 
@@ -26,7 +26,7 @@
             text-transform: uppercase;
             font-weight: bold;
             margin-right: 20px;
-            @media screen and (max-width:600px) {font-size: 2.5em;}
+            @media screen and (max-width:730px) {font-size: 2.5em;}
 
             &:hover
         {
