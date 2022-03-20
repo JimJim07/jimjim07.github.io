@@ -6,7 +6,8 @@
     {
     color: $color-white;
     text-align: center;
-    padding-top: 80px;   
+    padding-top: 80px;
+    @include phone {font-size: 4em;}
     }
     &__coopyright
     {
@@ -14,6 +15,7 @@
     font-weight: bold;
     padding-top: 30px;
     color: $color-secondary;
+    @include phone {font-size: 1.8em;}
     }   
 }
 

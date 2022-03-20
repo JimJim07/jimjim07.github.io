@@ -22,8 +22,8 @@
     border-radius: 20px;
     margin: 20px auto;
     @include phone{
-        width: 920px;
-        height: 540px;
+        width: 90%;
+        height: 500px;
         background-size: cover;
     }
     &__overlay
@@ -80,8 +80,8 @@
     border-radius: 20px;
     margin: 20px auto;
     @include phone{
-        width: 920px;
-        height: 540px;
+        width: 90%;
+        height: 500px;
         background-size: cover;
     }
     &__overlay
