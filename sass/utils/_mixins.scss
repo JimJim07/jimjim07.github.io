@@ -4,3 +4,9 @@
     text-align: center;
     margin-right: 30px;
 }
+
+@mixin phone {
+    @media screen and (max-width:980px){
+        @content;
+    }
+}
