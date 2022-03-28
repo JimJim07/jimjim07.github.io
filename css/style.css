@@ -1,143 +1,28 @@
-@charset "UTF-8";
-* {
-  box-sizing: content-box;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  text-align: center;
-}
-
-p {
-  font-size: 1.2rem;
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-.header {
-  text-align: center;
-  background-color: #000;
+.btn {
+  font-size: 3em;
+  background-color: #15eda5;
   color: #fff;
-  min-height: 250px;
-}
-.header__h1 {
-  padding: 50px 0;
-  font-family: "Lobster", cursive;
-  letter-spacing: 0.4rem;
-  font-size: 3rem;
-}
-.header__separator {
-  border-bottom: #777 1px solid;
-  width: 300px;
-  margin: auto;
-}
-.header__h2 {
-  font-size: 2.5rem;
-  font-family: "Lobster", cursive;
-  padding: 50px 0;
-  letter-spacing: 0.5rem;
-}
-
-.nav__ul {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  border-bottom: 2px solid #777;
-}
-.nav__li {
-  list-style: none;
-  padding: 20px 50px;
-  font-size: 1.8rem;
-}
-.nav__link:hover {
-  font-weight: bolder;
-}
-
-.footer {
-  background: #000;
-  text-align: center;
-  padding: 40px;
-}
-.footer p {
-  font-size: 1.5rem;
-  color: #fff;
-}
-
-.sec-projects {
-  background-color: #ececec;
-  padding: 20px;
-}
-.sec-projects h3 {
-  font-size: 1.5rem;
-  padding: 50px;
-  text-transform: uppercase;
-}
-.sec-projects h3::before {
-  content: "« ";
-  color: #777;
-}
-.sec-projects h3::after {
-  content: " »";
-  color: #777;
-}
-
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.project {
   width: fit-content;
-  background-color: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0px 3px 5px #777;
-  margin: 50px;
-  cursor: pointer;
-  transition: 500ms;
+  padding: 20px 40px;
+  margin: 100px auto;
+  border-radius: 30px;
 }
-@media screen and (max-width: 1240px) {
-  .project {
-    width: 80%;
-  }
+.btn__1 {
+  transition: all 1000ms;
 }
-.project:hover {
-  box-shadow: 0px 0px 10px 2px #444;
-  font-weight: bold;
+.btn__1:hover {
+  transform: scale(1.2);
+  background-color: #444;
 }
-.project:active {
-  transform: scale(1.7);
-  opacity: 0.8;
+.btn__1:hover + .btn__2 {
+  opacity: 1;
+  transform: translate(300px, -195px) rotate(-360deg);
+  background-color: #15eda5;
 }
-.project__img {
-  width: 500px;
-  height: 280px;
-}
-@media screen and (max-width: 1240px) {
-  .project__img {
-    width: 100%;
-    height: 420px;
-  }
-}
-.project__heading {
-  font-size: 1.5rem;
-}
-.project__date {
-  padding: 0.5rem;
-}
-
-.contact p {
-  border: 1px solid #444;
-  border-radius: 15px;
-  width: 80%;
-  margin: 0 auto 50px auto;
-  padding: 50px;
-}
-.contact p a {
-  font-weight: bold;
+.btn__2 {
+  background-color: #444;
+  opacity: 0;
+  transition: all 400ms;
 }
 
 /*# sourceMappingURL=style.css.map */
