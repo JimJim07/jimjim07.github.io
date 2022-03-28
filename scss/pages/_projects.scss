@@ -1,0 +1,74 @@
+.sec-projects {
+    background-color: rgb(236, 236, 236);
+    padding: 20px;
+    h3 {
+        font-size: 1.5rem;
+        padding: 50px;
+        text-transform: uppercase;
+        &::before {
+            content: "« ";
+            color: $cl-primary;
+        }
+        &::after {
+            content: " »";
+            color: $cl-primary;
+        }
+    }
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.project {
+    width: fit-content;
+    background-color: $cl-white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 3px 5px $cl-primary;
+    margin: 50px;
+    cursor: pointer;
+    transition: 500ms;
+    @media screen and(max-width:1240px){
+        width: 80%;
+    }
+    &:hover {
+        box-shadow: 0px 0px 10px 2px $cl-secondary;
+        font-weight: bold;
+        
+    }
+    &:active {
+        transform: scale(1.7);
+        opacity: 0.8;
+    }
+    &__img {
+        width: 500px;
+        height: 280px;
+        @media screen and(max-width:1240px){
+            width: 100%;
+            height: 420px;
+        }
+    }
+    &__heading {
+        font-size: 1.5rem;
+    }
+    &__date {
+        padding: 0.5rem;
+    }
+}
+
+.contact {
+    p{
+        border: 1px solid $cl-secondary;
+        border-radius: 15px;
+        width: 80%;
+        margin: 0 auto 50px auto;
+        padding: 50px;
+        a{
+            font-weight: bold;
+        }
+    }
+}

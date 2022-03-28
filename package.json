@@ -1,19 +1,11 @@
 {
-  "name": "jimjim07.github.io",
+  "name": "new-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JimJim07/jimjim07.github.io.git"
+    "sass": "sass --watch ./scss/style.scss:./css/style.css"
   },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JimJim07/jimjim07.github.io/issues"
-  },
-  "homepage": "https://github.com/JimJim07/jimjim07.github.io#readme"
+  "license": "ISC"
 }
