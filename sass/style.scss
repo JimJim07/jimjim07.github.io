@@ -1,7 +1,99 @@
 $cl-primary:#9356dc;
 $cl-secondary:#ff79da;
 $cl-tertiary:#99e2d0;
+$cl-fourth:#eaeaea;
+$cl-fifth: #f6f6f6;
+$cl-footer: #353535;
+$cl-white: #fff;
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+// HEADER
 
 .header {
-    color: $cl-tertiary;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    &__icon {
+        display: none;
+    }
+    &__logo {
+        display: block;
+        margin: auto;
+        width: 60%;
+    }
+}
+
+// LOCATION
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $cl-fourth;
+    box-shadow: inset 0px 10px 8px -10px #6a6a6a;
+    &__icon {
+        padding-right: 10px;
+    }
+    &__paragraph {
+        font-weight: bolder;
+    }
+}
+
+// BOOK
+
+.book {
+    background-color: $cl-fifth;
+    padding: 10px 30px 50px 30px;
+    text-align: center;
+    &__heading {
+        font-size: 1.5em;
+    }
+    &__btn {
+        padding: 15px;
+        margin-top: 10px;
+        letter-spacing: 0.5px;
+        border: none;
+        color: $cl-white;
+        border-radius: 50px;
+        background: linear-gradient(#ee74da, #9356dc);
+        cursor: pointer;
+    }
+}
+
+// FUNCTION
+
+.function {
+    padding: 20px 25px 50px 25px;
+    
+    &__container {
+        height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__div {
+        display: flex;
+        align-items: center;
+        background-color: $cl-fourth;
+        border-radius: 20px;
+        padding: 5px 0;
+    }
+    &__number {
+        background-color: #9356dc;
+        color: $cl-white;
+        padding: 5px 10px;
+        border-radius: 50%;
+        margin-left: -13px;
+        margin-right: 15px;
+    }
+    &__icon {
+        margin-right: 15px;
+    }
+    &__paragraph {
+        font-weight: bolder;
+    }
 }
