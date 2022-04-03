@@ -23,7 +23,7 @@ $cl-white: #fff;
     &__logo {
         display: block;
         margin: auto;
-        width: 60%;
+        width: 150px;
     }
 }
 
@@ -95,5 +95,74 @@ $cl-white: #fff;
     }
     &__paragraph {
         font-weight: bolder;
+    }
+}
+
+// MAIN
+
+.main {
+    background-color: $cl-fourth;
+    padding: 10px 5%;
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+.card {
+    max-width: 500px;
+    width: 100%;
+    background-color: $cl-white;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom:30px;
+    text-decoration: none;
+    &__img {
+        width: 100%;
+        height: 150px; 
+        object-fit: cover;
+    }
+    &__new {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: $cl-tertiary;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bolder;
+        color: #47b198;
+    }
+    &__contents {
+        padding: 0 20px 0 10px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__icon {
+        font-size: 25px;
+        &:hover {
+            color: $cl-secondary;
+        }
+    } 
+}
+
+// FOOTER
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $cl-footer;
+    color: $cl-white;
+    padding: 0 20px 20px 20px;
+    &__link {
+        color: $cl-white;
+        text-decoration: none;
+        padding-bottom: 10px;
+    }
+    &__icon {
+        padding-right: 10px;
     }
 }
