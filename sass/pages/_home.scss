@@ -4,20 +4,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $cl-fourth;
-    box-shadow: inset 0px 10px 8px -10px #6a6a6a;
+    background-color: lighten($cl-fourth, 70);
+    box-shadow: inset 0px 10px 8px -10px lighten($cl-fourth, 10);
     &__icon {
         padding-right: 10px;
     }
     &__paragraph {
         font-weight: bolder;
+        font-size: 1.2em;
     }
 }
 
 // BOOK
 
 .book {
-    background-color: $cl-fifth;
+    background-color: lighten($cl-fourth, 75);
     padding: 10px 30px 50px 30px;
     text-align: center;
     &__heading {
@@ -30,7 +31,7 @@
         border: none;
         color: $cl-white;
         border-radius: 50px;
-        background: linear-gradient(#ee74da, #9356dc);
+        background: linear-gradient($cl-secondary, $cl-primary);
         cursor: pointer;
     }
 }
@@ -46,15 +47,22 @@
         flex-direction: column;
         justify-content: space-between;
     }
+    &__heading {
+        font-size: 1.2em;
+    }
     &__div {
         display: flex;
         align-items: center;
-        background-color: $cl-fourth;
+        background-color: lighten($cl-fourth, 75);
         border-radius: 20px;
         padding: 5px 0;
+        box-shadow: 0px 0px 10px lighten($cl-fourth,50);
+        &:hover {
+            background-color: lighten($cl-primary,30);
+        }
     }
     &__number {
-        background-color: #9356dc;
+        background-color: $cl-primary;
         color: $cl-white;
         padding: 5px 10px;
         border-radius: 50%;
@@ -63,32 +71,40 @@
     }
     &__icon {
         margin-right: 15px;
+        font-size: 1.4em;
+        color: lighten($cl-fourth, 40);
     }
     &__paragraph {
         font-weight: bolder;
+        font-size: 0.9em;
     }
 }
 
 // MAIN
 
 .main {
-    background-color: $cl-fourth;
-    padding: 10px 5%;
+    background-color: lighten($cl-fourth, 75);
+    padding: 20px 0;
     &__container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
+    &__heading {
+        padding: 0 5%;
+        font-size: 1.2em;
+        margin: 0;
+    }
 }
 
 .card {
-    max-width: 500px;
+    max-width: 450px;
     width: 100%;
     background-color: $cl-white;
     border-radius: 15px;
     overflow: hidden;
     position: relative;
-    margin-bottom:30px;
+    margin: 20px 5%;
     text-decoration: none;
     &__img {
         width: 100%;
@@ -103,14 +119,26 @@
         padding: 5px;
         border-radius: 5px;
         font-weight: bolder;
-        color: #47b198;
+        color: darken($cl-tertiary, $amount: 30);
     }
     &__contents {
         padding: 0 20px 0 10px;
-        height: 70px;
+        height: 60px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
+    &__heading {
+        font-size: 1em;
+        margin: 0;
+    }
+    &__paragraph {
+        font-size: 0.9em;
+        margin: 0;
     }
     &__icon {
         font-size: 25px;
