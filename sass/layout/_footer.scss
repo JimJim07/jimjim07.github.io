@@ -1,0 +1,15 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $cl-footer;
+    color: $cl-white;
+    padding: 0 20px 20px 20px;
+    &__link {
+        color: $cl-white;
+        text-decoration: none;
+        padding-bottom: 10px;
+    }
+    &__icon {
+        padding-right: 10px;
+    }
+}
