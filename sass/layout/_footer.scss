@@ -3,11 +3,13 @@
     flex-direction: column;
     background-color: $cl-fourth;
     color: $cl-white;
-    padding: 0 20px 20px 20px;
+    padding: 0 20px 20px 5%;
     &__link {
         color: $cl-white;
-        text-decoration: none;
         padding-bottom: 10px;
+        &:hover {
+            color: $cl-primary;
+        }
     }
     &__icon {
         padding-right: 10px;
