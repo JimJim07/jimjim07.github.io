@@ -42,7 +42,6 @@
     padding: 20px 25px 50px 25px;
     
     &__container {
-        height: 260px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -56,7 +55,9 @@
         background-color: lighten($cl-fourth, 75);
         border-radius: 20px;
         padding: 5px 0;
+        margin-bottom: 20px;
         box-shadow: 0px 0px 10px lighten($cl-fourth,50);
+        transition: 400ms;
         &:hover {
             background-color: lighten($cl-primary,30);
         }
@@ -84,28 +85,30 @@
 
 .main {
     background-color: lighten($cl-fourth, 75);
-    padding: 20px 0;
+    padding: 20px;
     &__container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
     }
     &__heading {
-        padding: 0 5%;
+        padding: 0;
         font-size: 1.2em;
-        margin: 0;
+        margin-left: 2%;
     }
 }
 
 .card {
-    max-width: 450px;
     width: 100%;
     background-color: $cl-white;
     border-radius: 15px;
     overflow: hidden;
     position: relative;
-    margin: 20px 5%;
-    text-decoration: none;
+    margin: 10px 2%;
+    transition: 400ms;
+    &:hover {
+        transform: scale(1.05);
+    }
     &__img {
         width: 100%;
         height: 150px; 
@@ -134,7 +137,7 @@
     }
     &__heading {
         font-size: 1em;
-        margin: 0;
+        margin: 0 0 10px 0;
     }
     &__paragraph {
         font-size: 0.9em;
@@ -142,8 +145,38 @@
     }
     &__icon {
         font-size: 25px;
+        position: relative;
         &:hover {
             color: $cl-secondary;
         }
+    }
+    &__icon-hidden {
+        position: absolute;
+        left: 0;
+        transition: 400ms;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+        }
     } 
+}
+
+@media screen and (min-width:770px) {
+    .card {
+        width: 42%;
+    }
+    .main__heading {
+        margin-left: 5%;
+    }
+    .function {
+        width: 90%;
+        margin: auto;
+    }
+    .function__container {
+        flex-direction: row;
+        
+    }
+    .function__div {
+        width: 30%;
+    }
 }
