@@ -5,6 +5,7 @@
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 .header {
@@ -40,16 +41,6 @@ a {
 }
 .book__heading {
   font-size: 1.5em;
-}
-.book__btn {
-  padding: 15px;
-  margin-top: 10px;
-  letter-spacing: 0.5px;
-  border: none;
-  color: #fff;
-  border-radius: 50px;
-  background: linear-gradient(#ff79da, #9356dc);
-  cursor: pointer;
 }
 
 .function {
@@ -157,13 +148,17 @@ a {
 }
 .card__icon {
   font-size: 25px;
+  color: #353535;
   position: relative;
 }
-.card__icon:hover {
-  color: #ff79da;
-}
 .card__icon-hidden {
+  background: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
+  background: -webkit-linear-gradient(top, #e72c83 0%, #a742c6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   position: absolute;
+  cursor: pointer;
   left: 0;
   transition: 400ms;
   opacity: 0;
@@ -251,17 +246,6 @@ a {
 .option__price {
   font-weight: bolder;
 }
-.option__btn {
-  display: block;
-  margin: 40px auto 30px auto;
-  text-align: center;
-  width: 180px;
-  background: linear-gradient(#ff79da, #9356dc);
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  padding: 15px 25px;
-}
 
 .footer {
   display: flex;
@@ -279,6 +263,24 @@ a {
 }
 .footer__icon {
   padding-right: 10px;
+}
+
+.button {
+  display: block;
+  width: fit-content;
+  padding: 15px 50px;
+  text-align: center;
+  margin: 30px auto 0 auto;
+  letter-spacing: 0.5px;
+  color: #fff;
+  border-radius: 50px;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0 3px 8px #828282;
+  cursor: pointer;
+}
+.button:hover {
+  box-shadow: 0 3px 8px #4f4f4f;
+  background: linear-gradient(#ff93e1, #a16be0);
 }
 
 /*# sourceMappingURL=style.css.map */

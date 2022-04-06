@@ -24,16 +24,6 @@
     &__heading {
         font-size: 1.5em;
     }
-    &__btn {
-        padding: 15px;
-        margin-top: 10px;
-        letter-spacing: 0.5px;
-        border: none;
-        color: $cl-white;
-        border-radius: 50px;
-        background: linear-gradient($cl-secondary, $cl-primary);
-        cursor: pointer;
-    }
 }
 
 // FUNCTION
@@ -145,20 +135,29 @@
     }
     &__icon {
         font-size: 25px;
+        color: $cl-fourth;
         position: relative;
-        &:hover {
-            color: $cl-secondary;
-        }
     }
     &__icon-hidden {
+
+        background: linear-gradient(to bottom, #e72c83 0%,#a742c6 100%);
+        background: -webkit-linear-gradient(top, #e72c83 0%,#a742c6 100%); 
+        // background:-moz-linear-gradient(top, #e72c83 0%, #a742c6 100%);
+
+        background-clip: text;
+        -webkit-background-clip: text;
+        // -moz-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        
         position: absolute;
+        cursor: pointer;
         left: 0;
         transition: 400ms;
         opacity: 0;
         &:hover {
-            opacity: 1;
+            opacity: 1;     
         }
-    } 
+    }
 }
 
 @media screen and (min-width:770px) {

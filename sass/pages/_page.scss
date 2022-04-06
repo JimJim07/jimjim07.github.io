@@ -58,15 +58,4 @@
     &__price {
         font-weight: bolder;
     }
-    &__btn {
-        display: block;
-        margin: 40px auto 30px auto;
-        text-align: center;
-        width: 180px;
-        background: linear-gradient($cl-secondary, $cl-primary);
-        color: $cl-white;
-        border: none;
-        border-radius: 25px;
-        padding: 15px 25px;
-    }
 }

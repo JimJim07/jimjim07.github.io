@@ -1,0 +1,17 @@
+.button {
+    display: block;
+    width: fit-content;
+    padding: 15px 50px;
+    text-align: center;
+    margin: 30px auto 0 auto;
+    letter-spacing: 0.5px;
+    color: $cl-white;
+    border-radius: 50px;
+    background: linear-gradient($cl-secondary, $cl-primary);
+    box-shadow: 0 3px 8px lighten($cl-fourth, 30);
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0 3px 8px lighten($cl-fourth, 10);
+        background: linear-gradient(lighten($cl-secondary, 5), lighten($cl-primary, 5));
+    }
+}
