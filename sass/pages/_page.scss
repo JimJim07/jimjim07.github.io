@@ -1,38 +1,37 @@
 // MAIN
 
-.main-page {
+.main__img {
     width: 100%;
     padding: 0;
-    &__img {
-        width: 100%;
-        height: 240px;
-        object-fit: cover;
-        margin-bottom: -50px;
-    }
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
 }
 
-// OPTION
+// MENU
 
-.option {
+.menu {
+    margin-top: -75px;
     position: relative;
     background-color: lighten($cl-fourth, 75);
     border-radius: 50px 50px 0 0;
-    padding: 5%;
-    &__heading-h1 {
-        margin: 0;
-        padding-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        font-size: 1.6em;
+    padding: 0 5%;
+    &__heading {
+        font-family: 'Shrikhand', cursive;
+        padding-top: 30px;
     }
-    &__heading-h3 {
-        font-size: 0.9em;
-        font-weight: 400;
-        border-bottom: 3px solid $cl-tertiary;
-        padding-bottom: 5px;
-        width: 40px;
-    }
-    &__enter {
+}
+
+// SUBMENU
+
+.submenu {
+    // font-size: 0.9em;
+    font-weight: 400;
+    border-bottom: 3px solid $cl-tertiary;
+    padding-bottom: 5px;
+    width: 40px;
+
+    &__container {
         background-color: $cl-white;
         border-radius: 10px;
         padding: 10px 20px 10px 10px;
@@ -47,13 +46,13 @@
         align-items: center;
         justify-content: space-between;
     }
-    &__heading-h4 {
+    &__heading {
         margin: 0;
-        font-size: 0.9em;
+        // font-size: 0.9em;
     }
     &__paragraph {
         margin: 0;
-        font-size: 0.8em;
+        // font-size: 0.8em;
     }
     &__price {
         font-weight: bolder;

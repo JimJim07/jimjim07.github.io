@@ -1,9 +1,14 @@
 .footer {
+    &__heading {
+        font-family: 'Shrikhand', cursive;
+        letter-spacing: 1px;
+        font-weight: 100;
+    }
     display: flex;
     flex-direction: column;
     background-color: $cl-fourth;
     color: $cl-white;
-    padding: 0 20px 20px 5%;
+    padding: 0 20px 20px 20px;
     &__link {
         color: $cl-white;
         padding-bottom: 10px;
@@ -13,5 +18,6 @@
     }
     &__icon {
         padding-right: 10px;
+        font-size: 12px;
     }
 }
