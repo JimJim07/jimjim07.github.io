@@ -3,9 +3,13 @@
 .main__img {
     width: 100%;
     padding: 0;
-    width: 100%;
     height: 240px;
     object-fit: cover;
+}
+@media screen and (min-width:600px) {
+    .main__img {
+        height: 500px;
+    }
 }
 
 // MENU
@@ -15,10 +19,18 @@
     position: relative;
     background-color: lighten($cl-fourth, 75);
     border-radius: 50px 50px 0 0;
-    padding: 0 5%;
+    padding: 0 5% 30px;
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     &__heading {
         font-family: 'Shrikhand', cursive;
-        padding-top: 30px;
+        margin-top: 30px;
+    }
+    .heart {
+        padding-top: 10px;
     }
 }
 

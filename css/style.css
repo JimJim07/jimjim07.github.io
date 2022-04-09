@@ -56,10 +56,19 @@ a {
   padding: 5px 0;
   margin-bottom: 30px;
   box-shadow: 0px 0px 15px #cecece;
-  transition: 400ms;
+  transition: all 400ms;
 }
 .function__div:hover {
   background-color: #e4d5f6;
+}
+.function__div:hover .fa-mobile-screen-button {
+  color: #9356dc;
+}
+.function__div:hover .fa-list-ul {
+  color: #9356dc;
+}
+.function__div:hover .fa-store {
+  color: #9356dc;
 }
 .function__number {
   background-color: #9356dc;
@@ -160,7 +169,7 @@ a {
   -webkit-text-fill-color: transparent;
   position: absolute;
   cursor: pointer;
-  left: 0;
+  left: -1px;
   top: 0;
   transition: 400ms;
   opacity: 0;
@@ -172,21 +181,33 @@ a {
 .main__img {
   width: 100%;
   padding: 0;
-  width: 100%;
   height: 240px;
   object-fit: cover;
 }
 
+@media screen and (min-width: 600px) {
+  .main__img {
+    height: 500px;
+  }
+}
 .menu {
   margin-top: -75px;
   position: relative;
   background-color: #f4f4f4;
   border-radius: 50px 50px 0 0;
-  padding: 0 5%;
+  padding: 0 5% 30px;
+}
+.menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .menu__heading {
   font-family: "Shrikhand", cursive;
-  padding-top: 30px;
+  margin-top: 30px;
+}
+.menu .heart {
+  padding-top: 10px;
 }
 
 .submenu {

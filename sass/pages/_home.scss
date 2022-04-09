@@ -41,9 +41,18 @@
         padding: 5px 0;
         margin-bottom: 30px;
         box-shadow: 0px 0px 15px lighten($cl-fourth,60);
-        transition: 400ms;
+        transition: all 400ms;
         &:hover {
             background-color: lighten($cl-primary,30);
+        }
+        &:hover .fa-mobile-screen-button {
+            color: $cl-primary;
+        }
+        &:hover .fa-list-ul {
+            color: $cl-primary;
+        }
+        &:hover .fa-store {
+            color: $cl-primary;
         }
     }
     &__number {
@@ -62,6 +71,7 @@
     &__paragraph {
         font-weight: bold;
     }
+    
 }
 
 // MAIN
@@ -150,7 +160,7 @@
         
         position: absolute;
         cursor: pointer;
-        left: 0;
+        left: -1px;
         top: 0;
         transition: 400ms;
         opacity: 0;
