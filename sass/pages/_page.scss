@@ -3,9 +3,10 @@
 .main__img {
     width: 100%;
     padding: 0;
-    height: 240px;
-    object-fit: cover;
+    height: 330px;
+    object-fit: cover;   
 }
+
 @media screen and (min-width:600px) {
     .main__img {
         height: 500px;
@@ -27,17 +28,18 @@
     }
     &__heading {
         font-family: 'Shrikhand', cursive;
-        margin-top: 30px;
+        font-size: 1.7em;
+        margin-top: 50px;
     }
     .heart {
-        padding-top: 10px;
+        padding-top: 30px;
+        padding-right: 20px;
     }
 }
 
 // SUBMENU
 
 .submenu {
-    // font-size: 0.9em;
     font-weight: 400;
     border-bottom: 3px solid $cl-tertiary;
     padding-bottom: 5px;
@@ -46,27 +48,69 @@
     &__container {
         background-color: $cl-white;
         border-radius: 10px;
-        padding: 10px 20px 10px 10px;
+        padding-left: 10px;
         height: 65px;
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        overflow: hidden;
         margin-bottom: 15px;
+        &:hover > .submenu__price {
+            transform: translateX(0px);
+        }
+        &:hover > .animation {
+            transform: translateX(0px);
+            & > .animation__icon {
+                transform: rotate(0deg);
+            }
+        }
+        .animation {
+            background: $cl-tertiary;
+            width: 4em;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            transition: all 500ms;
+            transform: translateX(65px);
+        
+            &__icon {
+            color: $cl-tertiary;
+            background-color: $cl-white;
+            padding: 3px;
+            border-radius: 50%;
+            rotate: -180deg;
+            transition: all 500ms;
+            transform: rotate(-360deg);
+            }
+        }
     }
+    
     &__content {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        flex: 1;
+
+        flex-direction: column;
+        justify-content: space-evenly;
+        overflow: hidden;
     }
     &__heading {
         margin: 0;
-        // font-size: 0.9em;
+        padding-top: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;  
     }
     &__paragraph {
         margin: 0;
-        // font-size: 0.8em;
+        padding-bottom: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     &__price {
         font-weight: bolder;
-    }
+        align-self: flex-end;
+        padding: 10px 20px;
+        transition: all 500ms;
+        transform: translateX(65px);
+    }  
 }
