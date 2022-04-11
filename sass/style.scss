@@ -1,12 +1,11 @@
-@import "./utils/variable";
-
 @import "./base/base";
 
+@import "./utils/variable";
+
 @import "./layout/header";
-
-@import "./pages/home";
-@import "./pages/page";
-
 @import "./layout/footer";
 
 @import "./components/button";
+
+@import "./pages/home";
+@import "./pages/page";

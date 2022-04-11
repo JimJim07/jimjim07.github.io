@@ -20,7 +20,7 @@
     position: relative;
     background-color: lighten($cl-fourth, 75);
     border-radius: 50px 50px 0 0;
-    padding: 0 5% 30px;
+    padding: 0 5% 70px;
     &__header {
         display: flex;
         align-items: center;
@@ -48,37 +48,38 @@
     &__container {
         background-color: $cl-white;
         border-radius: 10px;
-        padding-left: 10px;
+        padding: 12px;
         height: 65px;
         display: flex;
         overflow: hidden;
         margin-bottom: 15px;
+        position: relative;
+        &:hover > .submenu__content {
+            width: 62%;
+        }
         &:hover > .submenu__price {
-            transform: translateX(0px);
+            transform: translateX(-65px);
         }
         &:hover > .animation {
-            transform: translateX(0px);
+            transform: translateX(-65px);
             & > .animation__icon {
                 transform: rotate(0deg);
             }
         }
         .animation {
             background: $cl-tertiary;
-            width: 4em;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
-            transition: all 500ms;
-            transform: translateX(65px);
+            padding: 22px;
+            position: absolute;
+            right: -65px;
+            bottom: 0;
+            transition: 500ms;
         
             &__icon {
             color: $cl-tertiary;
             background-color: $cl-white;
             padding: 3px;
             border-radius: 50%;
-            rotate: -180deg;
-            transition: all 500ms;
+            transition: transform 500ms;
             transform: rotate(-360deg);
             }
         }
@@ -86,31 +87,30 @@
     
     &__content {
         display: flex;
-        flex: 1;
-
         flex-direction: column;
-        justify-content: space-evenly;
-        overflow: hidden;
+        justify-content: space-between;
+        width: 90%;
+        transition: all 500ms;
     }
     &__heading {
         margin: 0;
-        padding-top: 10px;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;  
     }
     &__paragraph {
         margin: 0;
-        padding-bottom: 10px;
+        font-size: 0.9em;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
     }
     &__price {
         font-weight: bolder;
-        align-self: flex-end;
-        padding: 10px 20px;
+        padding-right:20px;
         transition: all 500ms;
-        transform: translateX(65px);
+        position: absolute;
+        right: 0;
+        bottom: 12px;
     }  
 }
