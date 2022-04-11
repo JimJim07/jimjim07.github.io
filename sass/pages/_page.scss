@@ -2,17 +2,14 @@
 
 .main__img {
     width: 100%;
+    margin-top: 72px;
     padding: 0;
     height: 330px;
-    object-fit: cover;   
+    object-fit: cover;
+    @media screen and (min-width:600px) {  
+    height: 500px;  
+    }  
 }
-
-@media screen and (min-width:600px) {
-    .main__img {
-        height: 500px;
-    }
-}
-
 // MENU
 
 .menu {
@@ -21,6 +18,11 @@
     background-color: lighten($cl-fourth, 75);
     border-radius: 50px 50px 0 0;
     padding: 0 5% 70px;
+    @media screen and (min-width:600px) {  
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        }
     &__header {
         display: flex;
         align-items: center;
@@ -35,6 +37,20 @@
         padding-top: 30px;
         padding-right: 20px;
     }
+    &__button {
+        padding: 15px 50px;
+        margin-top: 50px;
+    }
+}
+.all {
+    @media screen and (min-width:1000px) {  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+    &__div {
+        margin: 10px;
+    }
 }
 
 // SUBMENU
@@ -47,6 +63,7 @@
 
     &__container {
         background-color: $cl-white;
+        min-width: 335px;
         border-radius: 10px;
         padding: 12px;
         height: 65px;

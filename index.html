@@ -8,13 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <title>Projet-3</title>
+    <title>OhMyFood</title>
 </head>
 <body>
     <!-- HEADER -->
     <header class="header">
-        <!-- <a href="index.html"><i class="header__icon fa-solid fa-arrow-left"></i></a> -->
-        <img class="header__logo" src="images/logo/ohmyfood.png" alt="logo">
+        <!-- <a class="header__icon" href="index.html"><i class="fa-solid fa-arrow-left"></i></a> -->
+        <a class="header__link" href="index.html"><img class="header__logo" src="images/logo/ohmyfood.png" alt="logo"></a>
+        
     </header>
     <!-- LOCATION -->
     <div class="location">
@@ -50,83 +51,87 @@
     </div>
     <!-- MAIN -->
     <main class="main">
-
-        <h2 class="main__heading" id="restaurants">Restaurants</h2>
         <div class="main__container">
-            <!-- CARD-1 -->
-            <div class="card">
-                <a href="la-palette-du-gout.html" class="card__link">
-                    <img class="card__img" src="./images/restaurants-width-600px/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo restaurant">
-                    <div class="card__new">Nouveau</div>
-                    <div class="card__contents">
-                        <div class="card__text">
-                            <h3 class="card__heading">La palette du goût</h3>
-                            <p class="card__paragraph">Ménilmontant</p>
+            <h2 class="main__heading" id="restaurants">Restaurants</h2>
+            <div class="main__cards">
+                <!-- CARD-1 -->
+                <div class="card">
+                    <a href="la-palette-du-gout.html" class="card__link">
+                        <img class="card__img" src="./images/restaurants-width-600px/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo restaurant">
+                        <div class="card__new">Nouveau</div>
+                        <div class="card__contents">
+                            <div class="card__text">
+                                <h3 class="card__heading">La palette du goût</h3>
+                                <p class="card__paragraph">Ménilmontant</p>
+                            </div>
+                            <div class="heart">
+                                <i class="heart__icon fa-regular fa-heart"><i class="heart__icon-hidden fa-solid fa-heart"></i></i> 
+                            </div>
                         </div>
-                        <div class="heart">
-                            <i class="heart__icon fa-regular fa-heart"><i class="heart__icon-hidden fa-solid fa-heart"></i></i> 
+                    </a>
+                </div>
+                <!-- CARD-2 -->
+                <div class="card">
+                    <a href="la-note-enchanter.html" class="card__link">
+                        <img class="card__img card__img-dif" src="./images/restaurants-width-600px/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo restaurant">
+                        <div class="card__new">Nouveau</div>
+                        <div class="card__contents">
+                            <div class="card__text">
+                                <h3 class="card__heading">La note enchantée</h3>
+                                <p class="card__paragraph">Charonne</p>
+                            </div>
+                            <div class="heart">
+                                <i class="heart__icon fa-regular fa-heart"><i class="heart__icon-hidden fa-solid fa-heart"></i></i> 
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <!-- CARD-2 -->
-            <div class="card">
-                <a href="la-note-enchanter.html" class="card__link">
-                    <img class="card__img card__img-dif" src="./images/restaurants-width-600px/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo restaurant">
-                    <div class="card__new">Nouveau</div>
-                    <div class="card__contents">
-                        <div class="card__text">
-                            <h3 class="card__heading">La note enchantée</h3>
-                            <p class="card__paragraph">Charonne</p>
+                    </a>
+                </div>
+                <!-- CARD-3 -->
+                <div class="card">
+                    <a href="a-la-francaise.html" class="card__link">
+                        <img class="card__img" src="./images/restaurants-width-600px/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo restaurant">
+                        <!-- <div class="card__new">Nouveau</div> -->
+                        <div class="card__contents">
+                            <div class="card__text">
+                                <h3 class="card__heading">À la française</h3>
+                                <p class="card__paragraph">Cité Rouge</p>
+                            </div>
+                            <div class="heart">
+                                <i class="heart__icon fa-regular fa-heart"><i class="heart__icon-hidden fa-solid fa-heart"></i></i> 
+                            </div>
                         </div>
-                        <div class="heart">
-                            <i class="heart__icon fa-regular fa-heart"><i class="heart__icon-hidden fa-solid fa-heart"></i></i> 
+                    </a>
+                </div>
+                <!-- CARD-4 -->
+                <div class="card">
+                    <a href="le-delice-des-sens.html" class="card__link">
+                        <img class="card__img" src="./images/restaurants-width-600px/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo restaurant">
+                        <!-- <div class="card__new">Nouveau</div> -->
+                        <div class="card__contents">
+                            <div class="card__text">
+                                <h3 class="card__heading">Le délice des sens</h3>
+                                <p class="card__paragraph">Folie-Méricourt</p>
+                            </div>
+                            <div class="heart">
+                                <i class="heart__icon fa-regular fa-heart"><i class="heart__icon-hidden fa-solid fa-heart"></i></i> 
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <!-- CARD-3 -->
-            <div class="card">
-                <a href="a-la-francaise.html" class="card__link">
-                    <img class="card__img" src="./images/restaurants-width-600px/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo restaurant">
-                    <!-- <div class="card__new">Nouveau</div> -->
-                    <div class="card__contents">
-                        <div class="card__text">
-                            <h3 class="card__heading">À la française</h3>
-                            <p class="card__paragraph">Cité Rouge</p>
-                        </div>
-                        <div class="heart">
-                            <i class="heart__icon fa-regular fa-heart"><i class="heart__icon-hidden fa-solid fa-heart"></i></i> 
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- CARD-4 -->
-            <div class="card">
-                <a href="le-delice-des-sens.html" class="card__link">
-                    <img class="card__img" src="./images/restaurants-width-600px/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo restaurant">
-                    <!-- <div class="card__new">Nouveau</div> -->
-                    <div class="card__contents">
-                        <div class="card__text">
-                            <h3 class="card__heading">Le délice des sens</h3>
-                            <p class="card__paragraph">Folie-Méricourt</p>
-                        </div>
-                        <div class="heart">
-                            <i class="heart__icon fa-regular fa-heart"><i class="heart__icon-hidden fa-solid fa-heart"></i></i> 
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
+        
     </main>
     
     <!-- FOOTER -->
     <footer class="footer">
-        <h3 class="footer__heading">ohmyfood</h3>
-        <a href="#" class="footer__link"><i class="footer__icon fa-solid fa-utensils"></i> Proposer un restaurant</a>
-        <a href="#" class="footer__link"><i class="footer__icon fa-solid fa-handshake-angle"></i>Devenir Partenaire</a>
-        <a href="#" class="footer__link">Mentions légales</a>
-        <a href="mailto:jimcl@hotmail.fr" class="footer__link">Contact</a>
+        <div class="footer__container">
+            <a href="index.html"><h3 class="footer__heading">ohmyfood</h3></a>
+            <a href="#" class="footer__link"><i class="footer__icon fa-solid fa-utensils"></i> Proposer un restaurant</a>
+            <a href="#" class="footer__link"><i class="footer__icon fa-solid fa-handshake-angle"></i>Devenir Partenaire</a>
+            <a href="#" class="footer__link">Mentions légales</a>
+            <a href="mailto:jimcl@hotmail.fr" class="footer__link">Contact</a>
+        </div>
     </footer>
     
 </body>
