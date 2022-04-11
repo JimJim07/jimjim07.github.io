@@ -275,7 +275,7 @@ a {
 }
 @media screen and (min-width: 600px) {
   .menu {
-    width: 80%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -326,6 +326,7 @@ a {
   overflow: hidden;
   margin-bottom: 15px;
   position: relative;
+  cursor: pointer;
 }
 .submenu__container:hover > .submenu__content {
   width: 62%;
