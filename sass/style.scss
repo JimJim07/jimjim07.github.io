@@ -1,11 +1,14 @@
 @import "./utils/variable";
+@import "./utils/mixin";
 
 @import "./base/base";
+@import "./base/animation";
 
 @import "./layout/header";
 @import "./layout/footer";
 
 @import "./components/button";
+@import "./components/heart";
 
 @import "./pages/home";
 @import "./pages/page";

@@ -1,3 +1,5 @@
+
+
 // MAIN
 
 .main__img {
@@ -6,9 +8,8 @@
     padding: 0;
     height: 330px;
     object-fit: cover;
-    @media screen and (min-width:600px) {  
-    height: 500px;  
-    }  
+
+    @include breakpointSmall { height: 500px;}  
 }
 // MENU
 
@@ -17,12 +18,12 @@
     position: relative;
     background-color: lighten($cl-fourth, 75);
     border-radius: 50px 50px 0 0;
-    padding: 0 5% 70px;
-    @media screen and (min-width:600px) {  
+    padding: 0 3% 70px;
+    @include breakpointSmall { 
         width: 85%;
         margin-left: auto;
         margin-right: auto;
-        }
+    }
     &__header {
         display: flex;
         align-items: center;
@@ -33,7 +34,7 @@
         font-size: 1.7em;
         margin-top: 50px;
     }
-    .heart {
+    &__heart {
         padding-top: 30px;
         padding-right: 20px;
     }
@@ -42,14 +43,18 @@
         margin-top: 50px;
     }
 }
+
 .all {
-    @media screen and (min-width:1000px) {  
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @include breakpointMedium { 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
+
     &__div {
         margin: 10px;
+        @include breakpointMedium { width: 45%;}
+        @include breakpointLarge { width: 30%;}
     }
 }
 
@@ -60,10 +65,9 @@
     border-bottom: 3px solid $cl-tertiary;
     padding-bottom: 5px;
     width: 40px;
-
+    
     &__container {
         background-color: $cl-white;
-        min-width: 335px;
         border-radius: 10px;
         padding: 12px;
         height: 65px;
@@ -72,18 +76,21 @@
         margin-bottom: 15px;
         position: relative;
         cursor: pointer;
-        &:hover > .submenu__content {
-            width: 62%;
-        }
-        &:hover > .submenu__price {
-            transform: translateX(-65px);
-        }
-        &:hover > .animation {
-            transform: translateX(-65px);
-            & > .animation__icon {
-                transform: rotate(0deg);
+        &:hover {
+            & > .submenu__content {
+                width: 62%;
+            }
+            & > .submenu__price {
+                transform: translateX(-65px);
+            }
+            & > .animation {
+                transform: translateX(-65px);
+                & > .animation__icon {
+                    transform: rotate(0deg);
+                }
             }
         }
+        
         .animation {
             background: $cl-tertiary;
             padding: 22px;

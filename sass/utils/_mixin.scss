@@ -1,0 +1,17 @@
+// BREAKPOINT
+
+@mixin breakpointSmall {
+    @media screen and (min-width:600px) {
+        @content;
+    }
+}
+@mixin breakpointMedium {
+    @media screen and (min-width:1000px) {
+        @content;
+    }
+}
+@mixin breakpointLarge {
+    @media screen and (min-width:1400px) {
+        @content;
+    }
+}

@@ -1,0 +1,30 @@
+@keyframes animMenu {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.all__div:nth-child(1) {
+    animation: animMenu 600ms 0s cubic-bezier(.56,1.66,.72,.5) both;
+}
+.all__div:nth-child(2) {
+    animation: animMenu 600ms 300ms cubic-bezier(.56,1.66,.72,.5) both;
+}
+.all__div:nth-child(3) {
+    animation: animMenu 600ms 600ms cubic-bezier(.56,1.66,.72,.5) both;
+}
+
+// .submenu__container:nth-child(2) {
+//     animation: animMenu 600ms 0ms cubic-bezier(.56,1.66,.72,.5) both;
+// }
+// .submenu__container:nth-child(3) {
+//     animation: animMenu 600ms 300ms cubic-bezier(.56,1.66,.72,.5) both;
+// }
+// .submenu__container:nth-child(4) {
+//     animation: animMenu 600ms 600ms cubic-bezier(.56,1.66,.72,.5) both;
+// }

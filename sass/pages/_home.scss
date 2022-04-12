@@ -1,13 +1,15 @@
 // LOCATION
 
 .location {
-    margin-top: 72px;
+    margin-top: 73px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: lighten($cl-fourth, 70);
     box-shadow: inset 0px 10px 8px -10px lighten($cl-fourth, 10);
     &__paragraph {
+        font-size: 1.2em;
+        font-weight: 700;
         margin: 15px 20px;
     }
 }
@@ -31,19 +33,16 @@
 
 .function {
     padding: 20px 20px 30px 30px;
-    @media screen and (min-width:600px) {
-        max-width: 80%;
-    margin: auto;
+    @include breakpointSmall {
+        max-width: 85%;
+        margin: auto;
     }
-    
     
     &__container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        @media screen and (min-width:1000px) {
-            flex-direction: row;
-        }
+        @include breakpointMedium { flex-direction: row;}
     }
     
     &__div {
@@ -67,9 +66,7 @@
         &:hover > .fa-store {
             color: $cl-primary;
         }
-        @media screen and (min-width:1000px) {
-            width: 30%;
-        }
+        @include breakpointMedium { width: 30%;}
     }
     &__number {
         background-color: $cl-primary;
@@ -96,8 +93,8 @@
     padding: 30px 20px 50px;
     
     &__container {
-        @media screen and (min-width:600px) {
-            max-width: 80%;
+        @include breakpointSmall { 
+            max-width: 85%;
             margin: auto;
         }
     }
@@ -105,6 +102,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        
     }
     &__heading {
         padding: 0;
@@ -120,8 +118,12 @@
     position: relative;
     margin: 10px 0;
     box-shadow:  0px 0px 15px lighten($cl-fourth,60);
-    @media screen and (min-width:1000px) {
-        width: 45%;
+    transition: 400ms;
+    @include breakpointMedium { width: 47%;}
+
+    &:hover {
+        box-shadow: 0px 0px 10px lighten($cl-fourth,20);
+        transform: scale(1.05);
     }
     
     &__img {
@@ -136,9 +138,9 @@
         font-size: 0.9em;
         font-weight: 500;
         background-color: $cl-tertiary;
+        color: darken($cl-tertiary, $amount: 40);
         padding: 5px 10px;
         border-radius: 2px;
-        color: darken($cl-tertiary, $amount: 40);
     }
     &__contents {
         padding: 0 20px 0 10px;
@@ -156,32 +158,5 @@
     }
     &__paragraph {
         margin: 0;
-    }
-}
-.heart {
-    &__icon {
-        font-size: 25px;
-        position: relative;
-    }
-    &__icon-hidden {
-        font-size: 27px;
-        background: linear-gradient(bottom, $cl-secondary 0%,$cl-primary 100%);
-        background: -webkit-linear-gradient(bottom, $cl-secondary 0%,$cl-primary 100%); 
-        // background:-moz-linear-gradient(bottom, #e72c83 0%, #a742c6 100%);
-    
-        background-clip: text;
-        -webkit-background-clip: text;
-        // -moz-background-clip: text;
-        -webkit-text-fill-color:transparent;
-        
-        position: absolute;
-        cursor: pointer;
-        left: -1px;
-        top: -1px;
-        transition: 400ms;
-        opacity: 0;
-        &:hover {
-            opacity: 1;     
-        }
     }
 }
