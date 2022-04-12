@@ -282,6 +282,55 @@ a {
   margin: 0;
 }
 
+@keyframes loader {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+@keyframes stop {
+  0% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+    z-index: 5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+.loader-container {
+  background: #ffffffdf;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  animation: stop 2s both;
+}
+
+.dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #9356dc;
+  margin: 0 15px;
+  animation: loader 0.3s 15 alternate;
+}
+
+.d2 {
+  animation-delay: 50ms;
+  background: #ff79da;
+}
+
+.d3 {
+  animation-delay: 100ms;
+  background: #99e2d0;
+}
+
 .main__img {
   width: 100%;
   margin-top: 72px;
