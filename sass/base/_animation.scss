@@ -1,30 +1,75 @@
+// ANIMATION-MENU
+
 @keyframes animMenu {
     0% {
-        transform: scale(0);
         opacity: 0;
+        transform: translateY(50px);
     }
     100% {
-        transform: scale(1);
         opacity: 1;
+        transform: translateY(0px);
+    }
+}
+// OPTION-1
+
+// .all__div:nth-child(1) {
+//     animation: animMenu 600ms 0s cubic-bezier(.56,1.66,.72,.5) both;
+// }
+// .all__div:nth-child(2) {
+//     animation: animMenu 600ms 300ms cubic-bezier(.56,1.66,.72,.5) both;
+// }
+// .all__div:nth-child(3) {
+//     animation: animMenu 600ms 600ms cubic-bezier(.56,1.66,.72,.5) both;
+// }
+
+// OPTION-2
+
+.submenu__container:nth-child(2) {
+    animation: animMenu 600ms 0ms cubic-bezier(.56,1.66,.72,.5) both;
+}
+.submenu__container:nth-child(3) {
+    animation: animMenu 600ms 300ms cubic-bezier(.56,1.66,.72,.5) both;
+}
+.submenu__container:nth-child(4) {
+    animation: animMenu 600ms 600ms cubic-bezier(.56,1.66,.72,.5) both;
+}
+.submenu__container:nth-child(5) {
+    animation: animMenu 600ms 900ms cubic-bezier(.56,1.66,.72,.5) both;
+}
+
+// ANIMATION-VALIDATION
+
+.submenu__container {
+    &:hover {
+        & > .submenu__content {
+            width: 62%;
+        }
+        & > .submenu__price {
+            transform: translateX(-65px);
+        }
+        & > .animation {
+            transform: translateX(-65px);
+            & > .animation__icon {
+                transform: rotate(0deg);
+            }
+        }
     }
 }
 
-.all__div:nth-child(1) {
-    animation: animMenu 600ms 0s cubic-bezier(.56,1.66,.72,.5) both;
-}
-.all__div:nth-child(2) {
-    animation: animMenu 600ms 300ms cubic-bezier(.56,1.66,.72,.5) both;
-}
-.all__div:nth-child(3) {
-    animation: animMenu 600ms 600ms cubic-bezier(.56,1.66,.72,.5) both;
-}
+.animation {
+    background: $cl-tertiary;
+    padding: 22px;
+    position: absolute;
+    right: -65px;
+    bottom: 0;
+    transition: 500ms;
 
-// .submenu__container:nth-child(2) {
-//     animation: animMenu 600ms 0ms cubic-bezier(.56,1.66,.72,.5) both;
-// }
-// .submenu__container:nth-child(3) {
-//     animation: animMenu 600ms 300ms cubic-bezier(.56,1.66,.72,.5) both;
-// }
-// .submenu__container:nth-child(4) {
-//     animation: animMenu 600ms 600ms cubic-bezier(.56,1.66,.72,.5) both;
-// }
+    &__icon {
+    color: $cl-tertiary;
+    background-color: $cl-white;
+    padding: 3px;
+    border-radius: 50%;
+    transition: transform 500ms;
+    transform: rotate(-360deg);
+    }
+}

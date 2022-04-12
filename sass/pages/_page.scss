@@ -1,5 +1,3 @@
-
-
 // MAIN
 
 .main__img {
@@ -25,6 +23,7 @@
         margin-right: auto;
     }
     &__header {
+        letter-spacing: 1px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -76,40 +75,7 @@
         margin-bottom: 15px;
         position: relative;
         cursor: pointer;
-        &:hover {
-            & > .submenu__content {
-                width: 62%;
-            }
-            & > .submenu__price {
-                transform: translateX(-65px);
-            }
-            & > .animation {
-                transform: translateX(-65px);
-                & > .animation__icon {
-                    transform: rotate(0deg);
-                }
-            }
-        }
-        
-        .animation {
-            background: $cl-tertiary;
-            padding: 22px;
-            position: absolute;
-            right: -65px;
-            bottom: 0;
-            transition: 500ms;
-        
-            &__icon {
-            color: $cl-tertiary;
-            background-color: $cl-white;
-            padding: 3px;
-            border-radius: 50%;
-            transition: transform 500ms;
-            transform: rotate(-360deg);
-            }
-        }
     }
-    
     &__content {
         display: flex;
         flex-direction: column;
