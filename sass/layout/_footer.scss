@@ -1,4 +1,9 @@
 .footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $cl-fourth;
+    color: $cl-white;
+    padding: 0 20px 20px 20px;
     &__container {
         @include breakpointSmall {
             width: 85%;
@@ -11,11 +16,6 @@
         font-weight: 100;
         color: $cl-white;
     }
-    display: flex;
-    flex-direction: column;
-    background-color: $cl-fourth;
-    color: $cl-white;
-    padding: 0 20px 20px 20px;
     &__link {
         color: $cl-white;
         padding-bottom: 10px;
