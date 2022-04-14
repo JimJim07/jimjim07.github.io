@@ -23,11 +23,6 @@ a {
     z-index: -10;
   }
 }
-@keyframes loader {
-  100% {
-    transform: translateY(-30px);
-  }
-}
 @keyframes spinner {
   0% {
     opacity: 1;
@@ -40,6 +35,25 @@ a {
     transform: translateZ(0) scale(1, 1);
   }
 }
+.spinner-container {
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  animation: stop 2s both;
+}
+
+.spinner {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 150px;
+  margin: auto;
+  animation: stop 2s both;
+}
+
 .ball div > div {
   position: absolute;
   width: 24px;
@@ -52,7 +66,7 @@ a {
   left: 148px;
   top: 88px;
   animation-delay: -0.875s;
-  background-color: #ff79da;
+  background-color: #9356dc;
 }
 
 .ball > div:nth-child(1) {
@@ -64,7 +78,7 @@ a {
   left: 130px;
   top: 130px;
   animation-delay: -0.75s;
-  background-color: #99e2d0;
+  background-color: #ff79da;
 }
 
 .ball > div:nth-child(2) {
@@ -76,7 +90,7 @@ a {
   left: 88px;
   top: 148px;
   animation-delay: -0.625s;
-  background: #9356dc;
+  background: #99e2d0;
 }
 
 .ball > div:nth-child(3) {
@@ -88,7 +102,7 @@ a {
   left: 46px;
   top: 130px;
   animation-delay: -0.5s;
-  background-color: #d2cbd0;
+  background-color: #353535;
 }
 
 .ball > div:nth-child(4) {
@@ -100,7 +114,7 @@ a {
   left: 28px;
   top: 88px;
   animation-delay: -0.375s;
-  background-color: #ff79da;
+  background-color: #9356dc;
 }
 
 .ball > div:nth-child(5) {
@@ -112,7 +126,7 @@ a {
   left: 46px;
   top: 46px;
   animation-delay: -0.25s;
-  background: #99e2d0;
+  background: #ff79da;
 }
 
 .ball > div:nth-child(6) {
@@ -124,7 +138,7 @@ a {
   left: 88px;
   top: 28px;
   animation-delay: -0.125s;
-  background-color: #9356dc;
+  background-color: #99e2d0;
 }
 
 .ball > div:nth-child(7) {
@@ -136,31 +150,12 @@ a {
   left: 130px;
   top: 46px;
   animation-delay: 0s;
-  background-color: #d6d6d6;
+  background-color: #353535;
 }
 
 .ball > div:nth-child(8) {
   transform: rotate(315deg);
   transform-origin: 142px 58px;
-}
-
-.spinner {
-  background: #ffffffdf;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: stop 2s both;
-}
-
-.ball {
-  width: 100%;
-  height: 100%;
-  top: 30%;
-  left: 44%;
-  position: relative;
 }
 
 @keyframes animMenu {
