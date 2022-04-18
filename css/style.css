@@ -286,7 +286,7 @@ a {
 }
 .heart__icon-hidden {
   font-size: 27px;
-  background: linear-gradient(bottom, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
   background: -webkit-linear-gradient(bottom, #ff79da 0%, #9356dc 100%);
   background-clip: text;
   -webkit-background-clip: text;
