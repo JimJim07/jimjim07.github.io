@@ -827,11 +827,11 @@ h4 {
 }
 
 .bg-banniere {
-    background-image: url("img/compressed-picture/agence-la-panthere.jpg");
+    background-image: url("img/compressed-picture/agence-la-panthere.webp");
 }
 
 .bg-presentation {
-    background-image: url("img/compressed-picture/image-de-presentation.jpg");
+    background-image: url("img/compressed-picture/image-de-presentation.webp");
 }
 
 @media (max-width: 1024px) {
