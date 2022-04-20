@@ -12,6 +12,11 @@
 .footer__link {
     padding: 8px;
 }
+.portfolio-thumb {
+    margin: 24px auto;
+}
+
+/* MODIF END */
 body {
     margin: 0;
     padding: 0;
@@ -105,7 +110,7 @@ a:hover {
 }
 
 .texture-paper::before {
-    background: url("img/texture-paper.png");
+    background: url("img/compressed-picture/texture-paper.webp");
     background-size: 280px 280px;
 }
 
@@ -285,7 +290,9 @@ a:hover {
 .voffset-lg {
     margin-top: 80px;
 }
-
+.row {
+    padding-top: 30px;
+}
 .row-no-gutters {
     margin-right: 0;
     margin-left: 0;
@@ -491,8 +498,11 @@ button {
 
 .icon-md {
     font-size: 30px!important;
+    padding: 5px;
 }
-
+.icon-md div {
+    font-size: 16px;
+}
 .icon-lg {
     font-size: 60px!important;
 }
@@ -665,7 +675,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
+    color: #2c2c2c!important;
 }
 
 .container {
@@ -712,7 +722,7 @@ a {
 
 .social {
     max-width: 400px;
-    margin: auto auto auto auto;
+    margin: auto;
 }
 
 h2 {
@@ -748,10 +758,6 @@ h4 {
 
 .white {
     color: #FFFFFF!important;
-}
-
-.portfolio-thumb {
-    margin-bottom: 24px;
 }
 
 .portfolio-row {
