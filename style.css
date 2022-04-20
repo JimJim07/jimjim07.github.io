@@ -9,7 +9,9 @@
     font-style: normal;
     font-weight: 200;
 }
-
+.footer__link {
+    padding: 8px;
+}
 body {
     margin: 0;
     padding: 0;
@@ -145,7 +147,7 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+    color: rgb(255, 255, 255);
 }
 
 .d-bloc .a-btn:hover,
@@ -784,11 +786,11 @@ h4 {
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: #FFFFFF!important;
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
+    background: #ee6f33;
     color: #FFFFFF!important;
 }
 
