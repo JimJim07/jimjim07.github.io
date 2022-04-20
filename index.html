@@ -1,157 +1,128 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/904b3ce711.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <title>OhMyFood</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/jpg" href="pictures/spiral.jpg">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Clairy jimmy Développeur Web chez OpenClassRooms">
+	<title>Jimmy Clairy Developpeur Web</title>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WVSZNK597E"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-WVSZNK597E');
+	</script>
+
 </head>
 <body>
-    <!-- LOADER -->
-    <!-- <div class="loader-container">
-        <div class="dot d1"></div>
-        <div class="dot d2"></div>
-        <div class="dot d3"></div>
-    </div> -->
 
-    <!-- SPINNER -->
-    <div class="spinner-container">
-        <div class="spinner">
-            <div class="ball">
-                <div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div>
-            </div>
-        </div>
-    </div>
-    
-    
-    <!-- HEADER -->
-    <header class="header">
-        <!-- <a class="header__icon" href="index.html"><i class="fa-solid fa-arrow-left"></i></a> -->
-        <a class="header__link" href="index.html"><img class="header__logo" src="images/logo/ohmyfood.png" alt="logo"></a>   
-    </header>
-    
-    <!-- LOCATION -->
-    <div class="location">
-        <i class="location__icon fa-solid fa-location-dot"></i>
-        <p class="location__paragraph">Paris, Belleville</p>
-    </div>
+	<header class="header">
 
-    <!-- BOOK -->
-    <div class="book">
-        <h2 class="book__heading">Réservez le menu qui vous convient</h2>
-        <p class="book__paragraph">Découvrez des restaurants d'exception, séléctonnés par nos soins.</p>
-        <a class="button" href="#restaurants">Explorer nos restaurants</a>
-    </div>
+		<h1 class="header__heading-1">Jimmy Clairy</h1>
+		<div class="header__separator"></div>
+		<h2 class="header__heading-2">Développeur Web</h2>
 
-    <!-- FUNCTION -->
-    <div class="function">
-        <h2 class="function__heading">Fonctionnement</h2>
-        <div class="function__container">
-            <div class="function__div">
-                <p class="function__number">1</p>
-                <i class="function__icon fa-solid fa-mobile-screen-button"></i>
-                <p class="function__paragraph">Choisissez un restaurant</p>
-            </div>
-            <div class="function__div">
-                <p class="function__number">2</p>
-                <i class="function__icon fa-solid fa-list-ul"></i>
-                <p class="function__paragraph">Composez votre menu</p>
-            </div>
-            <div class="function__div">
-                <p class="function__number">3</p>
-                <i class="function__icon fa-solid fa-store"></i>
-                <p class="function__paragraph">Dégustez au restaurant</p>
-            </div> 
-        </div>  
-    </div>
+		<p><a href="pictures/picture-compressed/valencia.jpg" target="blank"><img class="header__picture" src="pictures/mini.png" alt="Logo"></a></p>
+	</header>
+	
+	<nav class="nav">
+		<ul class="nav__ul">
+			
+			<li class="nav__li"><a class="nav__a" href="#sec-projets">Mes Projets</a></li>
+			<li class="nav__li"><a class="nav__a" href="#contact">Contact</a></li>
+			<li class="nav__li"><a class="nav__a" href="projet-en-cours/index.html" target="blank">Projet en cours</a></li>
+			
+		</ul>
+	</nav>
+	<main class="main">
 
-    <!-- MAIN -->
-    <main class="main" id="restaurants">
-        <div class="main__container">
-            <h2 class="main__heading">Restaurants</h2>
-            <div class="main__cards">
-                <!-- CARD-1 -->
-                <div class="card">
-                    <a href="la-palette-du-gout.html" class="card__link">
-                        <img class="card__img" src="./images/restaurants-width-600px/jay-wennington-compressed.jpg" alt="photo restaurant">
-                        <div class="card__new">Nouveau</div>
-                        <div class="card__contents">
-                            <div class="card__text">
-                                <h3 class="card__heading">La palette du goût</h3>
-                                <p class="card__paragraph">Ménilmontant</p>
-                            </div>
-                            <div class="heart">
-                                <i class="heart__icon fa-regular fa-heart"><i class="heart__icon-hidden fa-solid fa-heart"></i></i> 
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- CARD-2 -->
-                <div class="card">
-                    <a href="la-note-enchanter.html" class="card__link">
-                        <img class="card__img card__img-dif" src="./images/restaurants-width-600px/stil-compressed.jpg" alt="photo restaurant">
-                        <div class="card__new">Nouveau</div>
-                        <div class="card__contents">
-                            <div class="card__text">
-                                <h3 class="card__heading">La note enchantée</h3>
-                                <p class="card__paragraph">Charonne</p>
-                            </div>
-                            <div class="heart">
-                                <i class="heart__icon fa-regular fa-heart"><i class="heart__icon-hidden fa-solid fa-heart"></i></i> 
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- CARD-3 -->
-                <div class="card">
-                    <a href="a-la-francaise.html" class="card__link">
-                        <img class="card__img" src="./images/restaurants-width-600px/toa-heftiba-compressed.jpg" alt="photo restaurant">
-                        <!-- <div class="card__new">Nouveau</div> -->
-                        <div class="card__contents">
-                            <div class="card__text">
-                                <h3 class="card__heading">À la française</h3>
-                                <p class="card__paragraph">Cité Rouge</p>
-                            </div>
-                            <div class="heart">
-                                <i class="heart__icon fa-regular fa-heart"><i class="heart__icon-hidden fa-solid fa-heart"></i></i> 
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- CARD-4 -->
-                <div class="card">
-                    <a href="le-delice-des-sens.html" class="card__link">
-                        <img class="card__img" src="./images/restaurants-width-600px/louis-hansel-compressed.jpg" alt="photo restaurant">
-                        <!-- <div class="card__new">Nouveau</div> -->
-                        <div class="card__contents">
-                            <div class="card__text">
-                                <h3 class="card__heading">Le délice des sens</h3>
-                                <p class="card__paragraph">Folie-Méricourt</p>
-                            </div>
-                            <div class="heart">
-                                <i class="heart__icon fa-regular fa-heart"><i class="heart__icon-hidden fa-solid fa-heart"></i></i> 
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </main>
-    
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer__container">
-            <a href="index.html"><h3 class="footer__heading">ohmyfood</h3></a>
-            <a href="#" class="footer__link"><i class="footer__icon fa-solid fa-utensils"></i> Proposer un restaurant</a>
-            <a href="#" class="footer__link"><i class="footer__icon fa-solid fa-handshake-angle"></i>Devenir Partenaire</a>
-            <a href="#" class="footer__link">Mentions légales</a>
-            <a href="mailto:jimcl@hotmail.fr" class="footer__link">Contact</a>
-        </div>
-    </footer>
-    
+		<h3 class="main__heading">BIENVENUE</h3>
+		<p class="main__p">Actuellement en formation de Développeur Web chez OpenClassRooms, voici quelques projets que j'ai réalisés.</p>
+	
+		
+		<h3 class="projet__heading">MES PROJETS</h3>
+			
+		<div class="projets">
+			<!-- PROJECT 8 -->
+			<div class="projet">
+				<a class="projet__a" href="projets-openclassrooms/projet-3/index.html" target="blank">
+				
+					<img class="projet__picture" src="pictures/picture-compressed/picture-8.jpg" alt="Mon projet numéro 8">
+			
+					<div class="projet__title">Projet-3 OpenClassRooms (HTML,SCSS)</div>
+					<div class="projet__date">12 / 04 / 2022</div>
+				</a>	
+			</div>
+			<!-- PROJECT 7 -->
+			<div class="projet">
+				<a class="projet__a" href="projets-openclassrooms/projet-2/index.html" target="blank">
+				
+					<img class="projet__picture" src="pictures/picture-compressed/picture-7.jpg" alt="Mon projet numéro 8">
+			
+					<div class="projet__title">Projet-2 OpenClassRooms (HTML,SCSS)</div>
+					<div class="projet__date">30 / 03 / 2022</div>
+				</a>	
+			</div>
+			<!-- PROJECT 6 -->
+			<div class="projet">
+				<a class="projet__a" href="cours-javascript/index.html" target="blank">
+				
+					<img class="projet__picture" src="pictures/picture-compressed/picture-6.jpg" alt="Mon projet numéro 8">
+			
+					<div class="projet__title">Citation (html,css,javascript)</div>
+					<div class="projet__date">15 / 02 / 2022</div>
+				</a>	
+			</div>
+			<!-- PROJECT 5 -->
+			<div class="projet">
+				<a class="projet__a" href="https://jimmyclairy.fr/" target="blank">
+				
+					<img class="projet__picture" src="pictures/picture-compressed/picture-5.jpg" alt="Mon projet numéro 8">
+			
+					<div class="projet__title">Site d'audrey (wordpress)</div>
+					<div class="projet__date">10 / 01 / 2022</div>
+				</a>	
+			</div>
+			<!-- PROJECT 4 -->
+			<div class="projet">
+				<a class="projet__a" href="mes-blogs/audrey/index.html" target="blank">
+				
+					<img class="projet__picture" src="pictures/picture-compressed/picture-4.jpg" alt="Mon projet numéro 8">
+			
+					<div class="projet__title">Blog d'audrey (HTML,SCSS)</div>
+					<div class="projet__date">05 / 01 / 2022</div>
+				</a>	
+			</div>
+			<!-- PROJECT 3 -->
+			<div class="projet">
+				<a class="projet__a" href="mes-sites/site-web-1/" target="blank">
+				
+					<img class="projet__picture" src="pictures/picture-compressed/picture-3.jpg" alt="Mon projet numéro 8">
+			
+					<div class="projet__title">Sitr web (HTML,SCSS)</div>
+					<div class="projet__date">18 / 12 / 2021</div>
+				</a>	
+			</div>
+			
+		</div>
+
+		<h3 class="contact__heading">CONTACT</h3>
+
+		<div id="contact">
+			<p class="contact__p">Si vous voulez me contacter, n'hésitez pas à m'envoyer un email à
+			<b><a href="mailto:jimcl@hotmail.fr"><span id="email">jimcl@hotmail.fr</span></a></b>.</p>
+		</div>		
+	</main>
+	
+	<footer class="footer">
+		<p class="footer__p">2022 © Jimmy Clairy</p>
+	</footer>
+
 </body>
 </html>

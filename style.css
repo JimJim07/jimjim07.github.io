@@ -1,0 +1,149 @@
+/* GENERAL */
+*{
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:  #f4f7f9;
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+p {
+    font-size: 1.1em;
+}
+/* HEADER */
+
+.header{
+    background: #1d1d1d;
+    color: white;
+    padding: 30px;
+}
+
+.header__heading-1{
+    font-family: 'Lobster', sans-serif;
+    letter-spacing: 0.2em;
+}
+
+.header__separator{
+    width: 150px;
+    height: 1px;
+    margin: 15px auto;
+    background: #999;
+}
+
+.header__picture{
+    margin-top: 35px;
+    width: 100px;
+    border-radius: 10%;
+    transition: 400ms;
+}
+
+.header__picture:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 5px 5px #f4f7f99b;
+    transition: 0.3s;
+}
+
+/* NAV */
+
+.nav{
+    background: white;
+    box-shadow: 0px 3px 1px -1px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+
+.nav__ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav__li{
+    list-style: none;
+    margin: 10px 50px;
+    font-size: 1.2em;
+}
+
+.nav__a:hover{
+    font-weight: bold;
+}
+
+/* MAIN */
+.main {
+    width: 85%;
+    margin: auto;
+}
+h3:before {
+    content: "« ";
+    color: grey;
+}
+.main__heading {
+    padding: 30px 0;
+}
+h3:after {
+    content: " »";
+    color: grey;
+}
+h3 {
+    padding: 30px;
+}
+#contact{
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+/* PROJET */
+
+.projets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.projet{
+    width: 440px;
+    margin: 30px 0;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: 0.4s;
+}
+.projet:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: scale(1.05);
+}
+.projet__picture{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+.projet__title{
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+.projet__date{
+    padding: 5px 0;
+    font-size: 0.8em;
+}
+
+@media screen and (min-width:780px){ 
+    .projet {
+        margin: 30px;
+    }
+}
+
+/* FOOTER */
+
+.footer{
+    background: #1d1d1d;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px;
+}
