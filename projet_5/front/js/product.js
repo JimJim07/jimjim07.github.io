@@ -1,4 +1,9 @@
-// rechercher dans url id de kanap
+// Tableau de stockage 
+let idProduct = [];
+let colorProduct = [];
+let numberProduct = [];
+
+// Rechercher dans url id de kanap
 const url = new URL(window.location);
 const idCanap = url.searchParams.get("id");
 
@@ -16,8 +21,13 @@ fetch('http://localhost:3000/api/products/'+ idCanap)
 
         // Personnaliser element
         img.src                 = data.imageUrl;
+        img.alt                 = data.altTxt;
+        img.title               = data.altTxt;
+
         title.textContent       = data.name;
+
         price.textContent       = data.price;
+
         description.textContent = data.description;
 
         // Ajout element
@@ -34,20 +44,23 @@ fetch('http://localhost:3000/api/products/'+ idCanap)
             // Ajout element 
             colors.append(optionColor);
         }
-
-        // test
-        console.log(data);
+            
 
         addToCart.addEventListener('click', ()=> {
-            let idProduct = [];
-            let colorProduct = [];
             
             idProduct.push(data._id);
-            colorProduct.push(optionColor.value);
+            colorProduct.push(colors.value);
+            numberProduct.push(quantity.value);
 
             console.log(idProduct);
             console.log(colorProduct);
-            })
-    })
+            console.log(numberProduct);
+            
+            // window.location = "cart.html";
+        })
 
-    
+            // test
+            console.log(data);
+            // const objJSONString = JSON.stringify(data.price);
+            // console.log(data.description); 
+    })

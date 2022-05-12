@@ -17,6 +17,8 @@ fetch('http://localhost:3000/api/products/')
             a.style.cursor  = "pointer";
 
             img.src         = kanap.imageUrl;
+            img.alt         = kanap.altTxt;
+            img.title       = kanap.altTxt;
             
             h3.textContent  = kanap.name;
 
