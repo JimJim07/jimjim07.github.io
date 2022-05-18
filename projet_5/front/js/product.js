@@ -1,3 +1,44 @@
+// SAUVEGARDE LES ARTICLES AU PANIER 
+function saveBasket(basket) {
+    localStorage.setItem("basket", JSON.stringify(basket));
+}
+
+// SORT LES ARTICLES DU PANIER 
+function getBasket() {
+    let basket = localStorage.getItem("basket");
+    if (basket == null){
+      return [];
+    } else {
+      return JSON.parse(basket);
+    }
+}
+
+// AJOUTE LES ARTICLES PANIER 
+function addBasket(product) {
+    let basket = getBasket();
+
+    // RECHERCHE SI ID OU COLOR EST IDENTIQUE
+    let foundId = basket.find( p => p.id == product.id);
+    let foundColor = basket.find( p => p.color == product.color);
+
+    if (foundId != undefined && foundColor != undefined) {
+
+        if (foundColor != undefined) {
+
+            foundColor.quantity += product.quantity;
+
+        } else {
+
+            foundId.quantity += product.quantity;
+        }
+        
+    } else {
+        
+        basket.push(product);
+    }
+    saveBasket(basket);
+}
+
 // RECHERCHE DANS URL ID KANAP
 const url = new URL(window.location);
 const idKanap = url.searchParams.get("id");
@@ -5,14 +46,14 @@ const idKanap = url.searchParams.get("id");
 fetch('http://localhost:3000/api/products/'+ idKanap)
     .then(reponse => reponse.json())
     .then(data => {
-        
+
         // SELECTIONNER OU CREE ELEMENT
-        const itemImage     = document.querySelector('.item__img');
-        const img           = document.createElement('img');
-        // const title         = document.querySelector('#title');
-        // const price         = document.querySelector('#price');
-        // const description   = document.querySelector('#description');
-        const colors        = document.querySelector('#colors');
+        let itemImage     = document.querySelector('.item__img');
+        let img           = document.createElement('img');
+        // let title         = document.querySelector('#title');
+        // let price         = document.querySelector('#price');
+        // let description   = document.querySelector('#description');
+        let colors        = document.querySelector('#colors');
 
         // PERSONNALISER ELEMENT
         img.src                 = data.imageUrl;
@@ -52,48 +93,11 @@ fetch('http://localhost:3000/api/products/'+ idKanap)
                 quantity    : Number(quantity.value)
             }
             
-            function saveBasket(basket) {
-                localStorage.setItem("basket", JSON.stringify(basket));
-            }
-
-            function getBasket() {
-                let basket = localStorage.getItem("basket");
-                if (basket == null){
-                  return [];
-                } else {
-                  return JSON.parse(basket);
-                }
-            }
-            
-            function addBasket(product) {
-                let basket = getBasket();
-                // RECHERCHE SI ID OU COLOR EST IDENTIQUE
-                let foundId = basket.find( p => p.id == product.id);
-                let foundColor = basket.find( p => p.color == product.color);
-
-                if (foundId != undefined && foundColor != undefined) {
-
-                    if (foundColor != undefined) {
-
-                        foundColor.quantity += product.quantity;
-
-                    } else {
-
-                        foundId.quantity += product.quantity;
-                    }
-                    
-                } else {
-                    
-                    basket.push(product);
-                }
-                saveBasket(basket);
-            }
-
             if ( product.color == "" || product.quantity <= 0) {
                 alert("Veuillez saisir tous les champs");
             }else {
                 addBasket(product)
-                if (confirm("Article ajouter au panier.\nVoulez vous aller au panier")) {
+                if (confirm("Article ajouter au panier.\nVoulez vous aller au panier.")) {
                     window.location = "cart.html";
                 }  
             }
