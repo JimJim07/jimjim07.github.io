@@ -2,17 +2,17 @@ fetch('http://localhost:3000/api/products/')
     .then(reponse => reponse.json())
     .then(data => {
 
-        // Crée les articles avec une boucle for of
+        // CREE LES ARTICLES AVEC UNE BOUCLE FOR OF
         for (const kanap of data) {
 
-            // Crée element
-            const a         = document.createElement('a');
-            const article   = document.createElement('article');
-            const img       = document.createElement('img');
-            const h3        = document.createElement('h3');
-            const p         = document.createElement('p');
+            // CREE ELEMENT
+            let a         = document.createElement('a');
+            let article   = document.createElement('article');
+            let img       = document.createElement('img');
+            let h3        = document.createElement('h3');
+            let p         = document.createElement('p');
 
-            // Personnaliser element
+            // PERSONNALISER ELEMENT
             a.href          = "product.html?id=" + kanap._id;
             a.style.cursor  = "pointer";
 
@@ -24,12 +24,12 @@ fetch('http://localhost:3000/api/products/')
 
             p.textContent   = kanap.description;
 
-            // Ajout element
+            // AJOUT ELEMENT
             items.append(a);
             a.append(article);
             article.append(img, h3, p);
 
-            // Au click dirigé sur la page produit avec href
+            // AU CLICK DIRIGE SUR LA PAGE PRODUITS
             a.addEventListener('click',() => {
                 window.location = a.href;
             });
