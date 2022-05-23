@@ -25,20 +25,21 @@ function removeFromBasket(product) {
 }
 
 // CHANGE QUANTITY 
-// function changeQuantity(product,quantity) {
-//   let basket = getBasket();
+function changeQuantity(product,quantity) {
+  let basket = getBasket();
   
-//   let foundProduct = basket.find(p => p.id == product.id);
+  let foundProduct = basket.find(p => p.id+p.color == product.id+product.color);
 
-//   if (foundProduct != undefined) {
-//     foundProduct.quantity += quantity;
-//     if (foundProduct.quantity <= 0) {
-//       removeFromBasket(product);
-//     } else {
-//       saveBasket(basket);
-//     }
-//   }  
-// }
+  if (foundProduct != undefined) {
+    foundProduct.quantity = quantity;
+    
+    if (foundProduct.quantity <= 0) {
+      removeFromBasket(product);
+    } else {
+      saveBasket(basket);
+    }
+  }  
+}
 
 // TOTAL QUANTITY BASKET
 let quantityBasket = 0;
@@ -134,10 +135,46 @@ for (const product of basket) {
     
     pDeleteItem.addEventListener('click', () => {
       removeFromBasket(product);
-      window.location = "cart.html";
+      window.location.reload();
+    })
+
+    input.addEventListener('change', () => {
+      let numberInputValue = Number(input.value)
+      if (numberInputValue <= 0) {
+        if(confirm("Quantité " +  numberInputValue + " non accepter!\nVoulez vous supprimez cet article.")){
+          removeFromBasket(product);
+          window.location.reload();
+        }
+      } else {
+        changeQuantity(product, numberInputValue);
+        window.location.reload();
+      }
     })
     
     totalQuantity.textContent = totalQuantityBasket(product.quantity);
     totalPrice.textContent    = totalPriceBasket(data.price, product.quantity);
   })
 }
+
+// FORMULAIRE
+
+let firstName = document.querySelector('#firstName');
+firstName.style.backgroundColor = "red";
+
+let lastName = document.querySelector('#lastName');
+lastName.style.backgroundColor = "#0000ff";
+
+let address = document.querySelector('#address');
+address.style.backgroundColor = "yellow";
+
+let city = document.querySelector("#city");
+city.style.backgroundColor = "purple";
+
+let email = document.querySelector('#email');
+email.style.backgroundColor = "green";
+
+let order = document.querySelector('#order');
+order.addEventListener('click', () => {
+  localStorage.clear(basket);
+  window.location = "confirmation.html";
+})
