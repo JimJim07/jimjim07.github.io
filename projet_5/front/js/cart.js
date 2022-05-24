@@ -140,6 +140,7 @@ for (const product of basket) {
 
     input.addEventListener('change', () => {
       let numberInputValue = Number(input.value)
+
       if (numberInputValue <= 0) {
         if(confirm("Quantité " +  numberInputValue + " non accepter!\nVoulez vous supprimez cet article.")){
           removeFromBasket(product);
@@ -147,7 +148,8 @@ for (const product of basket) {
         }
       } else {
         changeQuantity(product, numberInputValue);
-        window.location.reload();
+        // window.location.reload()
+        console.log(input.value);
       }
     })
     
@@ -156,25 +158,34 @@ for (const product of basket) {
   })
 }
 
-// FORMULAIRE
+// FORMULAIRE *************************************************************************
 
-let firstName = document.querySelector('#firstName');
-firstName.style.backgroundColor = "red";
+
 
 let lastName = document.querySelector('#lastName');
-lastName.style.backgroundColor = "#0000ff";
+lastName.style.backgroundColor = "#31d0be";
 
 let address = document.querySelector('#address');
-address.style.backgroundColor = "yellow";
+address.style.backgroundColor = "#44c3a1";
 
 let city = document.querySelector("#city");
-city.style.backgroundColor = "purple";
+city.style.backgroundColor = "#56d725";
 
 let email = document.querySelector('#email');
-email.style.backgroundColor = "green";
+email.style.backgroundColor = "#4dcc15";
 
 let order = document.querySelector('#order');
-order.addEventListener('click', () => {
-  localStorage.clear(basket);
-  window.location = "confirmation.html";
+order.addEventListener('submit', (e) => {
+
+  let firstName = document.querySelector('#firstName');
+
+  // firstName.style.backgroundColor = "#06ef82";
+  if (firstName.value.trim() == ""){
+    let myError = document.querySelector('#firstNameErrorMsg');
+    myError.textContent = "yes";
+    e.preventDefault()
+  }
+
+  // localStorage.clear(basket);
+  // window.location = "confirmation.html";
 })
