@@ -42,18 +42,34 @@ function changeQuantity(product,quantity) {
 }
 
 // TOTAL QUANTITY BASKET
-let quantityBasket = 0;
-function totalQuantityBasket(quantity) {
-  quantityBasket += quantity;
-  return quantityBasket
+function totalQuantityBasket() {
+  let basket = getBasket();
+  let result = 0;
+  for (const item of basket) {
+    result += item.quantity
+  }
+  return result
 }
 
 // TOTAL PRICE BASKET
-let priceBasket = 0;
-function totalPriceBasket(price, quantity) { 
-  priceBasket += quantity * price;
-  return priceBasket
+// let priceBasket = 0;
+// function totalPriceBasket(price, quantity) { 
+  
+//   priceBasket += quantity * price;
+//   return priceBasket
+// }
+
+function totalPriceBasket() {
+  let prix = 0;
+  let totalPrice1 = 0;
+  let basket = getBasket();
+  for (const item of basket) {
+    prix = item.quantity * item.price;
+    totalPrice1 += prix;
+  }
+  return totalPrice1
 }
+console.log(totalPriceBasket());
 // FUNCTIONS END ******************************************************************************
 
 // CREATE ARTICLES 
@@ -68,7 +84,9 @@ for (const product of basket) {
     let sectionCartItems = document.querySelector('#cart__items');    
     
     let articleCartItem = document.createElement('article');
-    articleCartItem.innerHTML = `<article class="cart__item" data-id="${product.id}" data-color="${product.color}"></article>`;
+    articleCartItem.className = "cart__item";
+    articleCartItem.setAttribute("data-id", product.id);
+    articleCartItem.setAttribute("data-color", product.color);
     sectionCartItems.append(articleCartItem);
 
     let divCartItemImg = document.createElement('div');
@@ -120,8 +138,7 @@ for (const product of basket) {
     input.name = "itemQuantity";
     input.min = 1;
     input.max = 100;
-    input.value = product.quantity;
-    // input.innerHTML = `<input type="number" class="itemQuantity" name="itemQuantity" min="1" max="100" value="42">`;
+    input.setAttribute("value", product.quantity);
     divCartItemContentSettingsQuantity.append(input);
 
     let divCartItemContentSettingsDelete = document.createElement('div');
@@ -135,26 +152,27 @@ for (const product of basket) {
     
     pDeleteItem.addEventListener('click', () => {
       removeFromBasket(product);
-      window.location.reload();
+      articleCartItem.remove();
+      totalQuantity.textContent = totalQuantityBasket();
+      totalPrice.textContent    = totalPriceBasket(data.price);
     })
-
+    
     input.addEventListener('change', () => {
       let numberInputValue = Number(input.value)
 
       if (numberInputValue <= 0) {
         if(confirm("Quantité " +  numberInputValue + " non accepter!\nVoulez vous supprimez cet article.")){
           removeFromBasket(product);
-          window.location.reload();
+          articleCartItem.remove();
         }
       } else {
         changeQuantity(product, numberInputValue);
-        // window.location.reload()
-        console.log(input.value);
+        totalQuantity.textContent = totalQuantityBasket()
+        totalPrice.textContent    = totalPriceBasket(data.price);
       }
     })
-    
-    totalQuantity.textContent = totalQuantityBasket(product.quantity);
-    totalPrice.textContent    = totalPriceBasket(data.price, product.quantity);
+    totalQuantity.textContent = totalQuantityBasket()
+    totalPrice.textContent    = totalPriceBasket(data.price);
   })
 }
 

@@ -81,7 +81,8 @@ fetch('http://localhost:3000/api/products/'+ idKanap)
       let product = {
         id          : data._id,
         color       : colors.value,
-        quantity    : Number(quantity.value)
+        quantity    : Number(quantity.value),
+        price       : data.price
       }
       
       if ( product.color == "" || product.quantity <= 0) {
